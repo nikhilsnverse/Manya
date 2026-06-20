@@ -283,6 +283,76 @@
             </div>
         </div>
 
+        <!-- Mangala Center Section -->
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="text-primary fw-bold text-uppercase tracking-wider">New Center</span>
+            <h2 class="fw-bold mt-2">Mangala Center</h2>
+            <p class="text-muted">Expanding our services to serve you better</p>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-lg-7" data-aos="fade-right">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold text-primary mb-3"><i class="bi bi-building me-2"></i>Mangala Facility</h5>
+                        <p class="text-muted mb-4">Our new center at Mangala, Bilaspur extends the same commitment to quality diagnostics with state-of-the-art equipment and compassionate care.</p>
+                        <div id="mangalaCarouselAbout" class="carousel slide rounded-3 overflow-hidden shadow mx-auto" style="max-width: 500px;" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#mangalaCarouselAbout" data-bs-slide-to="0" class="active"></button>
+                                <button type="button" data-bs-target="#mangalaCarouselAbout" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#mangalaCarouselAbout" data-bs-slide-to="2"></button>
+                                <button type="button" data-bs-target="#mangalaCarouselAbout" data-bs-slide-to="3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="{{ url_for('static', filename='images/maingate_managala.jpeg') }}" class="w-100" alt="Mangala Center Main Gate">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{{ url_for('static', filename='images/ct_scan_mangala.jpeg') }}" class="w-100" alt="CT Scan at Mangala">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{{ url_for('static', filename='images/xray_managala.jpeg') }}" class="w-100" alt="X-Ray at Mangala">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{{ url_for('static', filename='images/manya_ambulance_mangala.jpeg') }}" class="w-100" alt="Ambulance at Mangala">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#mangalaCarouselAbout" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon bg-dark bg-opacity-25 rounded-circle p-3" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#mangalaCarouselAbout" data-bs-slide="next">
+                                <span class="carousel-control-next-icon bg-dark bg-opacity-25 rounded-circle p-3" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5" data-aos="fade-left">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold text-primary mb-3"><i class="bi bi-geo-alt me-2"></i>Location & Contact</h5>
+                        <div class="d-flex align-items-start mb-3">
+                            <i class="bi bi-geo-alt-fill text-primary fs-4 me-3 mt-1"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Address</h6>
+                                <p class="text-muted mb-0 small">Real Heaven Apartment, beside Achievers Public School, Usal Bypass Road, Mangla Chowk, Bilaspur, Chhattisgarh</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-3">
+                            <i class="bi bi-telephone-fill text-primary fs-4 me-3"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Phone</h6>
+                                <p class="text-muted mb-0 small">9131053337</p>
+                                <p class="text-muted mb-0 small">07752-297977</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <hr class="my-5 opacity-10">
 
         <div class="text-center mb-5" data-aos="fade-up">
@@ -296,7 +366,7 @@
                     <div class="card-body p-4">
                         <div class="row align-items-center">
                             <div class="col-md-3 text-center mb-3 mb-md-0" data-aos="fade-right">
-                                <img src="{{ url_for('static', filename='images/drsirimg.jpeg') }}" alt="Dr. Kumar Devashish" class="img-fluid  shadow-sm">
+                                <img src="{{ url_for('static', filename='images/devashish.png') }}" alt="Dr. Kumar Devashish" class="img-fluid  shadow-sm">
                             </div>
                             <div class="col-md-9" data-aos="fade-left">
                                 <h4 class="fw-bold text-secondary mb-2">Senior Consultant Radiologist</h4>
@@ -442,7 +512,7 @@
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body p-4">
                         <div class="d-flex align-items-start mb-3">
-                            <img src="{{ url_for('static', filename='images/drsirimg.jpeg') }}" alt="Dr. Kumar Devashish" class="rounded-circle me-3" style="width: 80px; height: 80px; object-fit: cover; border-radius:1rem;">
+                            <img src="{{ url_for('static', filename='images/devashish.png') }}" alt="Dr. Kumar Devashish" class="rounded-circle me-3" style="width: 80px; height: 80px; object-fit: cover; border-radius:1rem;">
                             <div>
                                 <h4 class="fw-bold mb-1">Dr. Kumar Devashish</h4>
                                 <p class="text-primary small mb-2">Owner & Founder Director & Senior Consultant Radiologist </p>
@@ -457,7 +527,7 @@
                         </div>
                         
 
-                        <p class="text-muted mb-2">Senior Consultant Radiologist with 14 years of experience in diagnostic imaging and interpretation.</p>
+                        <p class="text-muted mb-2">Senior Consultant Radiologist with 20 years of experience in diagnostic imaging and interpretation.</p>
                         <p class="text-muted mb-0">Bringing extensive expertise in radiology to ensure accurate diagnoses and quality patient care.</p>
                     </div>
                 </div>

@@ -269,6 +269,68 @@
     </div>
 </section>
 
+<!-- Mangala Center Section -->
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="text-primary fw-bold text-uppercase tracking-wider">New Center</span>
+            <h2 class="fw-bold mt-2">Mangala Center</h2>
+            <p class="text-muted">Expanding our services to Mangala, Bilaspur</p>
+        </div>
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-7" data-aos="fade-right">
+                <div id="mangalaCarouselIndex" class="carousel slide rounded-4 overflow-hidden shadow mx-auto" style="max-width: 500px;" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#mangalaCarouselIndex" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#mangalaCarouselIndex" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#mangalaCarouselIndex" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#mangalaCarouselIndex" data-bs-slide-to="3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{{ url_for('static', filename='images/maingate_managala.jpeg') }}" class="w-100" alt="Mangala Center Main Gate">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ url_for('static', filename='images/ct_scan_mangala.jpeg') }}" class="w-100" alt="CT Scan Mangala">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ url_for('static', filename='images/xray_managala.jpeg') }}" class="w-100" alt="X-Ray Mangala">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ url_for('static', filename='images/manya_ambulance_mangala.jpeg') }}" class="w-100" alt="Ambulance Mangala">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#mangalaCarouselIndex" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark bg-opacity-25 rounded-circle p-3" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#mangalaCarouselIndex" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark bg-opacity-25 rounded-circle p-3" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-5" data-aos="fade-left">
+                <div class="ps-lg-4 mt-4 mt-lg-0">
+                    <h3 class="fw-bold text-secondary mb-3">Quality Diagnostics at Mangala</h3>
+                    <p class="text-muted">Our new center brings the same advanced diagnostic technology and expert care closer to the Mangala community. Equipped with modern CT, X-Ray, and ambulance services.</p>
+                    <div class="d-flex align-items-start mb-2">
+                        <i class="bi bi-geo-alt-fill text-primary fs-4 me-3 mt-1"></i>
+                        <span class="text-muted">Real Heaven Apartment, Mangla Chowk, Bilaspur</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-telephone-fill text-primary fs-4 me-3"></i>
+                        <div>
+                            <p class="text-muted mb-0">9131053337 | 07752-297977</p>
+                        </div>
+                    </div>
+                    <a href="{{ url_for('contact') }}" class="btn btn-primary rounded-pill px-4">View Location</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Testimonials Section -->
 <section class="py-5">
     <div class="container">

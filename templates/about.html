@@ -355,31 +355,52 @@
 
         <hr class="my-5 opacity-10">
 
-        <div class="text-center mb-5" data-aos="fade-up">
-            <span class="text-primary fw-bold text-uppercase tracking-wider">About Our Expert</span>
+        <div class="text-center mb-4" data-aos="fade-up">
+            <span class="badge bg-primary fw-semibold px-4 py-2 mb-2 d-inline-block" style="border-radius: 50px;">
+                <i class="bi bi-star-fill me-1"></i> Managing Director
+            </span>
             <h2 class="fw-bold mt-2">Dr. Kumar Devashish</h2>
         </div>
 
-        <div class="row mb-5">
-            <div class="col-lg-8 mx-auto">
-                <div class="card border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <div class="row align-items-center">
-                            <div class="col-md-3 text-center mb-3 mb-md-0" data-aos="fade-right">
-                                <img src="{{ url_for('static', filename='images/devashish.jpeg') }}" alt="Dr. Kumar Devashish" class="img-fluid  shadow-sm">
+        <div class="row mb-5 justify-content-center">
+            <div class="col-lg-10">
+                <div class="position-relative overflow-hidden rounded-4" style="background: linear-gradient(135deg, #f8fafc 0%, #f0fdf4 100%); border-left: 5px solid var(--primary-color); box-shadow: 0 20px 60px rgba(16,185,129,0.12);">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-4 text-center p-4 p-md-5" data-aos="fade-right">
+                            <div class="position-relative d-inline-block">
+                                <img src="{{ url_for('static', filename='images/devashish.jpeg') }}" alt="Dr. Kumar Devashish" class="img-fluid rounded-3 shadow" style="max-height: 320px;">
+                                <div class="position-absolute bottom-0 start-50 translate-middle-x mb-2">
+                                    <span class="badge bg-dark text-white px-3 py-1 fw-semibold rounded-pill shadow-sm">
+                                        <i class="bi bi-patch-check-fill text-primary me-1"></i> 20+ Years
+                                    </span>
+                                </div>
                             </div>
-                            <div class="col-md-9" data-aos="fade-left">
-                                <h4 class="fw-bold text-secondary mb-2">Senior Consultant Radiologist</h4>
-                                <p class="text-primary fw-bold mb-3">20 Years of Experience</p>
-                                <p class="text-muted mb-3">
-                                    The centre operates under the expert guidance of Dr. Kumar Devashish, a senior consultant radiologist 
-                                    with 20 years of experience. His veteran insights are instrumental in providing high-accuracy reporting 
-                                    that local clinicians rely on for further complex medical decisions.
-                                </p>
-                                <p class="text-muted mb-0">
-                                    His two decades in the medical field provide him with the expertise to interpret complex cases 
-                                    that require deep clinical insight.
-                                </p>
+                        </div>
+                        <div class="col-md-8 p-4 p-md-5" data-aos="fade-left">
+                            <h3 class="fw-bold mb-1" style="color: var(--secondary-color);">Leading with Expertise</h3>
+                            <p class="text-primary fw-semibold mb-3" style="font-size: 1.05rem;">Senior Consultant Radiologist</p>
+                            <p class="text-muted mb-3 lh-lg">
+                                The centre operates under the expert guidance of Dr. Kumar Devashish, a senior consultant radiologist 
+                                with 20 years of experience. His veteran insights are instrumental in providing high-accuracy reporting 
+                                that local clinicians rely on for further complex medical decisions.
+                            </p>
+                            <p class="text-muted mb-4 lh-lg">
+                                His two decades in the medical field provide him with the expertise to interpret complex cases 
+                                that require deep clinical insight.
+                            </p>
+                            <div class="d-flex flex-wrap gap-4">
+                                <div class="text-center">
+                                    <span class="fw-bold fs-3 text-primary">20+</span>
+                                    <p class="small text-muted mb-0">Years Experience</p>
+                                </div>
+                                <div class="text-center">
+                                    <span class="fw-bold fs-3 text-primary">5000+</span>
+                                    <p class="small text-muted mb-0">Reports Reviewed</p>
+                                </div>
+                                <div class="text-center">
+                                    <span class="fw-bold fs-3 text-primary">100%</span>
+                                    <p class="small text-muted mb-0">Commitment</p>
+                                </div>
                             </div>
                         </div>
                     </div>

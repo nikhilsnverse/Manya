@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /static/uploads/
 
-Sitemap: https://manyadiagnostic.in/sitemap.xml
+Sitemap: https://manyadiagonistic.in/sitemap.xml

@@ -3,7 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Chatbot Debug</title>
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Manya Imaging and Diagnostic Point">
+    <meta name="description" content="Chat with Manya AI Assistant for quick answers about diagnostic services, appointments, and healthcare information at Manya Diagnostic Center in Bilaspur.">
+    <meta name="keywords" content="AI chatbot diagnostic center, healthcare assistant, Manya Imaging chat, Bilaspur diagnostic chat">
+    <link rel="canonical" href="https://manyadiagonistic.in/chatbot">
+    <title>AI Chat Assistant - Manya Imaging & Diagnostic Center Bilaspur</title>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://manyadiagonistic.in/chatbot">
+    <meta property="og:site_name" content="Manya Imaging & Diagnostic Point">
+    <meta property="og:title" content="AI Chat Assistant - Manya Imaging & Diagnostic Center">
+    <meta property="og:description" content="Chat with our AI assistant to get quick answers about diagnostic services, appointments, and healthcare information.">
+    <meta property="og:image" content="https://manyadiagonistic.in/static/images/manyalogo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Chat Assistant - Manya Imaging & Diagnostic Center">
+    <meta name="twitter:description" content="Chat with our AI assistant for quick answers about diagnostic services.">
+    <meta name="twitter:image" content="https://manyadiagonistic.in/static/images/manyalogo.png">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/manyalogo.png') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <style>
@@ -72,109 +88,53 @@
         .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
         @keyframes typing { 0%, 60%, 100% { transform: translateY(0); opacity: 0.5; } 30% { transform: translateY(-10px); opacity: 1; } }
         
-        /* Mobile responsive styles */
         @media (max-width: 768px) {
-            body {
-                height: 100vh;
-                height: -webkit-fill-available;
-            }
-            .chat-container {
-                height: 100vh;
-                height: -webkit-fill-available;
-            }
-            .chat-header {
-                padding: 10px;
-            }
-            .chat-messages {
-                padding: 15px;
-                padding-bottom: 5px;
-            }
-            .chat-input {
-                padding: 10px;
-                min-height: 60px;
-            }
-            .message-bubble {
-                max-width: 85%;
-                font-size: 14px;
-            }
-            .chat-header h5 {
-                font-size: 16px;
-            }
-            .input-group {
-                flex-wrap: nowrap;
-            }
-            #chatInput {
-                font-size: 16px; /* Prevents zoom on iOS */
-                min-height: 44px; /* iOS touch target minimum */
-            }
-            .btn {
-                font-size: 14px;
-                padding: 8px 12px;
-                min-height: 44px; /* iOS touch target minimum */
-            }
+            body { height: 100vh; height: -webkit-fill-available; }
+            .chat-container { height: 100vh; height: -webkit-fill-available; }
+            .chat-header { padding: 10px; }
+            .chat-messages { padding: 15px; padding-bottom: 5px; }
+            .chat-input { padding: 10px; min-height: 60px; }
+            .message-bubble { max-width: 85%; font-size: 14px; }
+            .chat-header h5 { font-size: 16px; }
+            .input-group { flex-wrap: nowrap; }
+            #chatInput { font-size: 16px; min-height: 44px; }
+            .btn { font-size: 14px; padding: 8px 12px; min-height: 44px; }
         }
-        
         @media (max-width: 480px) {
-            .chat-header {
-                padding: 8px;
-            }
-            .chat-messages {
-                padding: 10px;
-            }
-            .chat-input {
-                padding: 8px;
-                min-height: 50px;
-            }
-            .message-bubble {
-                max-width: 90%;
-                font-size: 13px;
-                padding: 8px 12px;
-            }
-            .chat-header h5 {
-                font-size: 14px;
-            }
-            .btn {
-                font-size: 12px;
-                padding: 6px 10px;
-                min-height: 40px;
-            }
-            #chatInput {
-                min-height: 40px;
-            }
+            .chat-header { padding: 8px; }
+            .chat-messages { padding: 10px; }
+            .chat-input { padding: 8px; min-height: 50px; }
+            .message-bubble { max-width: 90%; font-size: 13px; padding: 8px 12px; }
+            .chat-header h5 { font-size: 14px; }
+            .btn { font-size: 12px; padding: 6px 10px; min-height: 40px; }
+            #chatInput { min-height: 40px; }
         }
-        
-        /* Additional mobile fixes */
-        .input-group {
-            width: 100%;
-        }
-        
-        /* Ensure input is visible on all mobile devices */
+        .input-group { width: 100%; }
         @supports (-webkit-touch-callout: none) {
-            .chat-container {
-                min-height: 100vh;
-            }
+            .chat-container { min-height: 100vh; }
         }
     </style>
 </head>
 <body>
     <div class="chat-container">
-        <div class="chat-header d-flex align-items-center">
-            <button onclick="goBack()" class="btn btn-link text-white me-3 p-0 text-decoration-none">
+        <header class="chat-header d-flex align-items-center">
+            <button onclick="goBack()" class="btn btn-link text-white me-3 p-0 text-decoration-none" aria-label="Go back to previous page">
                 <i class="bi bi-arrow-left fs-4"></i>
             </button>
-            <h5 class="mb-0"><i class="bi bi-robot me-2"></i>Manya AI Assistant</h5>
-        </div>
+            <h1 class="mb-0 h5"><i class="bi bi-robot me-2"></i>Manya AI Assistant</h1>
+        </header>
         
-        <div class="chat-messages" id="chatBox">
+        <main class="chat-messages" id="chatBox" role="log" aria-label="Chat messages" aria-live="polite">
             <div class="message message-received">
                 <div class="message-bubble">Hello! I'm Manya AI Assistant. How can I help you today?</div>
             </div>
-        </div>
+        </main>
         
         <div class="chat-input">
             <div class="input-group">
-                <input type="text" id="chatInput" class="form-control" placeholder="Type your message..." autocomplete="off">
-                <button class="btn btn-success" type="button" onclick="sendMessage()" id="sendButton">
+                <label for="chatInput" class="visually-hidden">Type your message</label>
+                <input type="text" id="chatInput" class="form-control" placeholder="Type your message..." autocomplete="off" aria-label="Message input">
+                <button class="btn btn-success" type="button" onclick="sendMessage()" id="sendButton" aria-label="Send message">
                     <i class="bi bi-send-fill"></i> <span class="d-none d-md-inline">Send</span>
                 </button>
             </div>
@@ -251,20 +211,15 @@
             if (e.key === 'Enter') sendMessage();
         });
 
-        // Back button functionality
         function goBack() {
-            // Check if there's a referrer and it's from the same domain
             if (document.referrer && document.referrer.includes(window.location.hostname)) {
                 window.history.back();
             } else {
-                // If no referrer or external referrer, go to home page
                 window.location.href = '/';
             }
         }
 
-        // Store the referring page when the chat loads
         window.addEventListener('load', function() {
-            // Store the current referrer for later use
             sessionStorage.setItem('chatReferrer', document.referrer);
         });
     </script>

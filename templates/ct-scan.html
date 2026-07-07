@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+{% import '_macros.html' as seo with context %}
+
+{% block schema %}
+{{ seo.service_schema('CT Scan', 'Advanced 160 Slice CT Scan services at Manya Imaging in Bilaspur. Cardiac CT Angiography, head, chest, abdomen CT imaging.', 'https://manyadiagonistic.in/ct-scan') }}
+{% set faqs = [
+    {"question": "What is a CT scan?", "answer": "A CT (Computed Tomography) scan uses X-rays and computer processing to create detailed cross-sectional images of the body. At Manya Imaging, we use a 160 Slice CT scanner for rapid, high-resolution imaging."},
+    {"question": "How should I prepare for a CT scan?", "answer": "Preparation depends on the type of CT scan. For abdominal scans, you may need to fast for 4-6 hours. For cardiac CT, avoid caffeine. Our team provides specific instructions when you book."},
+    {"question": "Is CT scan safe?", "answer": "Yes, CT scans are safe when performed by trained professionals. Our 160 Slice CT uses advanced dose-reduction technology. The benefits of accurate diagnosis far outweigh the minimal radiation exposure."},
+    {"question": "How long does a CT scan take?", "answer": "Most CT scans take 10-30 minutes depending on the area being scanned. The actual scan time is very fast with our 160 Slice CT, typically just a few seconds."},
+    {"question": "What is CT Coronary Angiography?", "answer": "CT Coronary Angiography is a non-invasive procedure to detect blockages in heart vessels. Manya Imaging is the first diagnostic center in Bilaspur to offer this advanced cardiac imaging service."}
+] %}
+{{ seo.faq_schema(faqs) }}
+{% endblock %}
+
+{% block content %}
+<section class="bg-primary text-white py-5 text-center position-relative overflow-hidden">
+    <div class="container position-relative z-1" data-aos="zoom-in">
+        <h1 class="fw-bold display-4">CT Scan in Bilaspur</h1>
+        <p class="lead opacity-75">160 Slice Highly Advanced Cardiac CT Scan</p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-8" data-aos="fade-right">
+                <h2 class="fw-bold text-secondary mb-4">Advanced CT Scan Services</h2>
+                <p class="text-muted fs-5 mb-4">At Manya Imaging & Diagnostic Point, we offer 160 Slice CT scan services with exceptional imaging capabilities for comprehensive diagnosis.</p>
+                <div class="mb-4 p-4 bg-light rounded-4">
+                    <h3 class="fw-bold text-primary mb-3">CT Scan Procedures</h3>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Head &amp; Neck CT</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Chest &amp; Abdomen CT</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Cardiac CT Angiography</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>3D Reconstructions</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>CT-guided Biopsy</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Carcinoma Detection &amp; Staging</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Trauma &amp; Emergency CT</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>CT Urography</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-muted">Our ultra-fast 160 Slice CT scanner provides exceptional cardiac imaging capabilities, making it ideal for coronary artery assessment and comprehensive body imaging.</p>
+            </div>
+            <div class="col-lg-4" data-aos="fade-left">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-4 text-center">
+                        <img src="{{ url_for('static', filename='images/equipment1.jpeg') }}" alt="160 Slice CT Scan Machine at Manya Imaging Bilaspur" class="img-fluid rounded-3 mb-3" loading="lazy" decoding="async" width="400" height="300">
+                        <h4 class="fw-bold text-primary">160 Slice uCT 780</h4>
+                        <p class="text-muted small">Ultra-fast scanning with exceptional image quality</p>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-3">Quick Information</h5>
+                        <ul class="list-unstyled small">
+                            <li class="mb-2"><i class="bi bi-clock text-primary me-2"></i>Scan Time: 10-30 min</li>
+                            <li class="mb-2"><i class="bi bi-person-check text-primary me-2"></i>Expert Radiologist: Dr. Kumar Devashish</li>
+                            <li class="mb-2"><i class="bi bi-shield-check text-primary me-2"></i>NABH Approved Facility</li>
+                            <li class="mb-2"><i class="bi bi-telephone text-primary me-2"></i>Call: 07752 403073</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="text-primary fw-bold text-uppercase tracking-wider">Why Choose Us</span>
+            <h2 class="fw-bold mt-2">Why Manya Imaging for CT Scan?</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card border-0 shadow-sm text-center p-4 h-100">
+                    <div class="mb-3 text-primary"><i class="bi bi-cpu fs-1"></i></div>
+                    <h5 class="fw-bold">Advanced Technology</h5>
+                    <p class="text-muted small">160 Slice CT with exceptional imaging capabilities and ultra-fast scanning.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card border-0 shadow-sm text-center p-4 h-100">
+                    <div class="mb-3 text-primary"><i class="bi bi-person-badge fs-1"></i></div>
+                    <h5 class="fw-bold">Expert Radiologist</h5>
+                    <p class="text-muted small">Dr. Kumar Devashish with 20+ years of experience in radiology.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card border-0 shadow-sm text-center p-4 h-100">
+                    <div class="mb-3 text-primary"><i class="bi bi-shield-check fs-1"></i></div>
+                    <h5 class="fw-bold">NABH Approved</h5>
+                    <p class="text-muted small">First diagnostic in Chhattisgarh to receive NABH accreditation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="text-primary fw-bold text-uppercase tracking-wider">FAQ</span>
+            <h2 class="fw-bold mt-2">Frequently Asked Questions About CT Scan</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="ctFaqAccordion">
+                    {% for faq in faqs %}
+                    <div class="accordion-item border-0 mb-2 shadow-sm rounded-3">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed rounded-3 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq{{ loop.index }}" aria-expanded="false" aria-controls="faq{{ loop.index }}">
+                                {{ faq.question }}
+                            </button>
+                        </h3>
+                        <div id="faq{{ loop.index }}" class="accordion-collapse collapse" data-bs-parent="#ctFaqAccordion">
+                            <div class="accordion-body text-muted">{{ faq.answer }}</div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-primary text-white text-center">
+    <div class="container" data-aos="zoom-in">
+        <h2 class="fw-bold mb-3">Book Your CT Scan Appointment</h2>
+        <p class="lead opacity-75 mb-4">Schedule your CT scan at Manya Imaging in Bilaspur. Quick and easy booking process.</p>
+        <a href="{{ url_for('book_test') }}" class="btn btn-light btn-lg rounded-pill px-5 fw-bold me-3">Book Now</a>
+        <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg rounded-pill px-5 fw-bold">Contact Us</a>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-4" data-aos="fade-up">
+            <h3 class="fw-bold text-secondary">Explore Our Other Services</h3>
+            <p class="text-muted">Comprehensive diagnostic solutions under one roof</p>
+        </div>
+        <div class="row g-3 justify-content-center" data-aos="fade-up">
+            <div class="col-md-3 col-6">
+                <a href="{{ url_for('mri') }}" class="text-decoration-none">
+                    <div class="card border-0 shadow-sm text-center p-3 service-card">
+                        <div class="text-primary mb-2"><i class="bi bi-magnet fs-2"></i></div>
+                        <h6 class="fw-bold mb-0">MRI Scan</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-6">
+                <a href="{{ url_for('digital_xray') }}" class="text-decoration-none">
+                    <div class="card border-0 shadow-sm text-center p-3 service-card">
+                        <div class="text-primary mb-2"><i class="bi bi-file-medical fs-2"></i></div>
+                        <h6 class="fw-bold mb-0">Digital X-Ray</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-6">
+                <a href="{{ url_for('ultrasound') }}" class="text-decoration-none">
+                    <div class="card border-0 shadow-sm text-center p-3 service-card">
+                        <div class="text-primary mb-2"><i class="bi bi-soundwave fs-2"></i></div>
+                        <h6 class="fw-bold mb-0">Ultrasound</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-6">
+                <a href="{{ url_for('services') }}" class="text-decoration-none">
+                    <div class="card border-0 shadow-sm text-center p-3 service-card">
+                        <div class="text-primary mb-2"><i class="bi bi-grid-3x3-gap fs-2"></i></div>
+                        <h6 class="fw-bold mb-0">All Services</h6>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

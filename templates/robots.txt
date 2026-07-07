@@ -1,5 +1,16 @@
 User-agent: *
 Allow: /
+Allow: /ct-scan
+Allow: /digital-xray
+Allow: /mri
+Allow: /ultrasound
+Allow: /services
+Allow: /about
+Allow: /gallery
+Allow: /contact
+Allow: /book-test
+Allow: /chatbot
 Disallow: /static/uploads/
+Disallow: /api/
 
-Sitemap: https://manyadiagonistic.in/sitemap.xml
+Sitemap: {{ base_url }}/sitemap.xml

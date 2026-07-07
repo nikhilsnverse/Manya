@@ -1,45 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for endpoint, data in pages.items() %}
+{% if data.canonical_url and endpoint != 'test' %}
     <url>
-        <loc>https://manyadiagonistic.in/</loc>
-        <lastmod>2025-07-05</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
+        <loc>{{ data.canonical_url }}</loc>
+        <lastmod>{{ today }}</lastmod>
+        <changefreq>{{ data.changefreq }}</changefreq>
+        <priority>{{ data.priority }}</priority>
     </url>
-    <url>
-        <loc>https://manyadiagonistic.in/about</loc>
-        <lastmod>2025-07-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://manyadiagonistic.in/services</loc>
-        <lastmod>2025-07-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://manyadiagonistic.in/gallery</loc>
-        <lastmod>2025-07-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://manyadiagonistic.in/contact</loc>
-        <lastmod>2025-07-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://manyadiagonistic.in/book-test</loc>
-        <lastmod>2025-07-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://manyadiagonistic.in/chatbot</loc>
-        <lastmod>2025-07-05</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.4</priority>
-    </url>
+{% endif %}
+{% endfor %}
 </urlset>

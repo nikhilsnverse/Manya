@@ -1,5 +1,19 @@
 {% extends 'base.html' %}
 
+{% block schema %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": "https://manyadiagonistic.in/about#aboutpage",
+    "name": "About Manya Imaging & Diagnostic Point",
+    "description": "Learn about Manya Imaging & Diagnostic Point in Bilaspur, led by Dr. Kumar Devashish.",
+    "url": "https://manyadiagonistic.in/about",
+    "mainEntity": {"@id": "https://manyadiagonistic.in#organization"}
+}
+</script>
+{% endblock %}
+
 {% block content %}
 <section class="bg-primary text-white py-5 text-center position-relative overflow-hidden">
     <div class="container position-relative z-1" data-aos="zoom-in">
@@ -17,19 +31,19 @@
                     To bridge the gap between advanced medical science and patient-centric care in Chhattisgarh.
                 </p>
                 <div class="mb-3">
-                    <h6 class="fw-bold text-primary">Precision in Diagnostics</h6>
+                    <h3 class="h6 fw-bold text-primary">Precision in Diagnostics</h3>
                     <p class="text-muted small">Utilizing 20 years of experience to provide reports that leave no room for ambiguity.</p>
                 </div>
                 <div class="mb-3">
-                    <h6 class="fw-bold text-primary">Technological Integration</h6>
+                    <h3 class="h6 fw-bold text-primary">Technological Integration</h3>
                     <p class="text-muted small">Continuously upgrading to high-end equipment like 1.5 Tesla MRI and 160-slice CT scans.</p>
                 </div>
                 <div class="mb-3">
-                    <h6 class="fw-bold text-primary">Quality and Safety</h6>
+                    <h3 class="h6 fw-bold text-primary">Quality and Safety</h3>
                     <p class="text-muted small">Strict adherence to NABH standards ensuring safe and patient-friendly environment.</p>
                 </div>
                 <div>
-                    <h6 class="fw-bold text-primary">Affordable Excellence</h6>
+                    <h3 class="h6 fw-bold text-primary">Affordable Excellence</h3>
                     <p class="text-muted small">World-class, reliable, and affordable diagnostic services for everyone.</p>
                 </div>
             </div>
@@ -50,7 +64,6 @@
 
         <hr class="my-5 opacity-10">
 
-        <!-- Key Strengths Section -->
         <div class="text-center mb-5" data-aos="fade-up">
             <span class="text-primary fw-bold text-uppercase tracking-wider">Key Strengths</span>
             <h2 class="fw-bold mt-2">Why Choose Us</h2>
@@ -60,9 +73,9 @@
             <div class="col-lg-6" data-aos="fade-right">
                 <div class="card border-0 shadow-sm h-100">
                     <div class="card-body p-4">
-                        <h5 class="fw-bold text-primary mb-3">
+                        <h3 class="fw-bold text-primary h5 mb-3">
                             <i class="bi bi-award-fill me-2"></i>Experience-Driven Results
-                        </h5>
+                        </h3>
                         <p class="text-muted">
                             With Dr. Devashish's 20 years tenure, we specialize in "difficult-to-read" scans, offering a level of expertise 
                             often found only in metro-city hospitals.
@@ -73,11 +86,11 @@
             <div class="col-lg-6" data-aos="fade-left">
                 <div class="card border-0 shadow-sm h-100">
                     <div class="card-body p-4">
-                        <h5 class="fw-bold text-primary mb-3">
+                        <h3 class="fw-bold text-primary h5 mb-3">
                             <i class="bi bi-clock-history me-2"></i>Extended Patient Support
-                        </h5>
+                        </h3>
                         <p class="text-muted">
-                            Unlike many centres that close early, we operate 24×365 days (including holidays), catering to both routine and 
+                            Unlike many centres that close early, we operate 24x365 days (including holidays), catering to both routine and 
                             emergency trauma cases with late-working professionals for scans and reports.
                         </p>
                     </div>
@@ -91,7 +104,7 @@
                     <div class="mb-3 text-primary">
                         <i class="bi bi-people-fill fs-1"></i>
                     </div>
-                    <h5 class="card-title fw-bold">High-Volume Capability</h5>
+                    <h3 class="h5 card-title fw-bold">High-Volume Capability</h3>
                     <p class="card-text text-muted small">Designed to handle high patient flow without compromising personalized care and hygiene.</p>
                 </div>
             </div>
@@ -100,7 +113,7 @@
                     <div class="mb-3 text-primary">
                         <i class="bi bi-shield-fill-check fs-1"></i>
                     </div>
-                    <h5 class="card-title fw-bold">Trusted Credibility</h5>
+                    <h3 class="h5 card-title fw-bold">Trusted Credibility</h3>
                     <p class="card-text text-muted small">Strong reputation for transparency in pricing and ethical practices with NABH status.</p>
                 </div>
             </div>
@@ -109,7 +122,7 @@
                     <div class="mb-3 text-primary">
                         <i class="bi bi-lightning-fill fs-1"></i>
                     </div>
-                    <h5 class="card-title fw-bold">Fast Turnaround Time</h5>
+                    <h3 class="h5 card-title fw-bold">Fast Turnaround Time</h3>
                     <p class="card-text text-muted small">Rapid reporting allows patients to receive results quickly for timely medical intervention.</p>
                 </div>
             </div>
@@ -118,13 +131,12 @@
                     <div class="mb-3 text-primary">
                         <i class="bi bi-geo-alt-fill fs-1"></i>
                     </div>
-                    <h5 class="card-title fw-bold">Centralized Location</h5>
-                    <p class="card-text text-muted small">Located on Link Road, serving as central hub for patients from neighbouring districts.</p>
+                    <h3 class="h5 card-title fw-bold">Centralized Location</h3>
+                    <a href="{{ url_for('contact') }}" class="card-text text-muted small text-decoration-none d-block">Located on Link Road, serving as central hub for patients from neighbouring districts. View on map →</a>
                 </div>
             </div>
         </div>
 
-        <!-- Special Features -->
         <div class="row g-4 mb-5">
             <div class="col-lg-4" data-aos="fade-right">
                 <div class="card border-0 shadow-sm">
@@ -132,7 +144,7 @@
                         <div class="mb-3 text-primary">
                             <i class="bi bi-patch-check-fill fs-1"></i>
                         </div>
-                        <h5 class="fw-bold text-primary">NABH Accreditation</h5>
+                        <h3 class="h5 fw-bold text-primary">NABH Accreditation</h3>
                         <p class="text-muted small">
                             As an NABH-approved facility, we follow rigorous national protocols for patient safety, 
                             hygiene, and quality control, which is rare for standalone diagnostic points.
@@ -146,10 +158,10 @@
                         <div class="mb-3 text-primary">
                             <i class="bi bi-heart-pulse-fill fs-1"></i>
                         </div>
-                        <h5 class="fw-bold text-primary">CT Coronary Angiography</h5>
+                        <h3 class="h5 fw-bold text-primary">CT Coronary Angiography</h3>
                         <p class="text-muted small">
                             A special facility for people of Bilaspur where a whole heart check-up is done without any 
-                            invasive procedure.
+                            invasive procedure. <a href="{{ url_for('ct_scan') }}" class="text-primary">Learn more →</a>
                         </p>
                     </div>
                 </div>
@@ -160,7 +172,7 @@
                         <div class="mb-3 text-primary">
                             <i class="bi bi-arrow-repeat fs-1"></i>
                         </div>
-                        <h5 class="fw-bold text-primary">Continuous Innovation</h5>
+                        <h3 class="h5 fw-bold text-primary">Continuous Innovation</h3>
                         <p class="text-muted small">
                             Constantly upgrading technical infrastructure and staff training to stay ahead of evolving 
                             medical challenges.
@@ -170,7 +182,6 @@
             </div>
         </div>
 
-        <!-- About Section -->
         <div class="row mb-5">
             <div class="col-12">
                 <div class="text-center mb-4" data-aos="fade-up">
@@ -190,17 +201,18 @@
                                     <i class="bi bi-award-fill fs-3 text-primary"></i>
                                 </div>
                                 <div>
-                                    <h5 class="fw-bold text-primary">NABH Approved</h5>
+                                    <h3 class="h5 fw-bold text-primary">NABH Approved</h3>
                                     <p class="text-muted mb-0">Reflecting our commitment to international benchmarks of quality, 
                                     patient safety, and clinical excellence.</p>
                                 </div>
                             </div>
                         </div>
+                        <a href="{{ url_for('services') }}" class="btn btn-primary rounded-pill px-4">View Our Services</a>
                     </div>
                     <div class="col-lg-4" data-aos="fade-left">
                         <div class="card border-0 shadow-sm">
                             <div class="card-body p-4">
-                                <h5 class="fw-bold text-secondary mb-3">Quick Facts</h5>
+                                <h3 class="h5 fw-bold text-secondary mb-3">Quick Facts</h3>
                                 <ul class="list-unstyled">
                                     <li class="mb-3">
                                         <i class="bi bi-calendar-check text-primary me-2"></i>
@@ -248,7 +260,7 @@
                                         <div class="d-flex align-items-center">
                                             <i class="bi bi-geo-alt-fill text-primary fs-4 me-3"></i>
                                             <div>
-                                                <h6 class="fw-bold mb-1">Address</h6>
+                                                <h3 class="h6 fw-bold mb-1">Address</h3>
                                                 <p class="text-muted mb-0 small">Manya Imaging and Diagnostic Point<br>R.K Plaza<br>Link Road, Bilaspur, Chhattisgarh</p>
                                             </div>
                                         </div>
@@ -257,8 +269,8 @@
                                         <div class="d-flex align-items-center">
                                             <i class="bi bi-clock-fill text-primary fs-4 me-3"></i>
                                             <div>
-                                                <h6 class="fw-bold mb-1">Operation Hours</h6>
-                                                <p class="text-muted mb-0 small">24 hours × 365 days<br>(Including holidays like Holi, Diwali)</p>
+                                                <h3 class="h6 fw-bold mb-1">Operation Hours</h3>
+                                                <p class="text-muted mb-0 small">24 hours x 365 days<br>(Including holidays like Holi, Diwali)</p>
                                             </div>
                                         </div>
                                     </div>
@@ -266,7 +278,7 @@
                             </div>
                             <div class="col-lg-4 text-center" data-aos="fade-left">
                                 <div class="bg-light rounded-3 p-4">
-                                    <h6 class="fw-bold text-primary mb-3">Serving Patients From</h6>
+                                    <h3 class="h6 fw-bold text-primary mb-3">Serving Patients From</h3>
                                     <div class="d-flex flex-wrap justify-content-center gap-2">
                                         <span class="badge bg-primary text-white">Mungeli</span>
                                         <span class="badge bg-primary text-white">Janjgir</span>
@@ -283,7 +295,6 @@
             </div>
         </div>
 
-
         <div class="text-center mb-4" data-aos="fade-up">
             <span class="badge bg-primary fw-semibold px-4 py-2 mb-2 d-inline-block" style="border-radius: 50px;">
                 <i class="bi bi-star-fill me-1"></i> Managing Director
@@ -297,7 +308,7 @@
                     <div class="row g-0 align-items-center">
                         <div class="col-md-4 text-center p-4 p-md-5" data-aos="fade-right">
                             <div class="position-relative d-inline-block">
-                                <img src="{{ url_for('static', filename='images/devasish.jpeg') }}" alt="Dr. Kumar Devashish" class="img-fluid rounded-3 shadow" style="max-height: 320px;">
+                                <img src="{{ url_for('static', filename='images/devasish.jpeg') }}" alt="Dr. Kumar Devashish - Senior Consultant Radiologist at Manya Imaging Bilaspur" class="img-fluid rounded-3 shadow" style="max-height: 320px;" loading="lazy" decoding="async" width="300" height="320">
                                 <div class="position-absolute bottom-0 start-50 translate-middle-x mb-2">
                                     <span class="badge bg-dark text-white px-3 py-1 fw-semibold rounded-pill shadow-sm">
                                         <i class="bi bi-patch-check-fill text-primary me-1"></i> 20+ Years
@@ -339,7 +350,6 @@
 
         <hr class="my-5 opacity-10">
 
-        <!-- Operation Style Section -->
         <div class="text-center mb-5" data-aos="fade-up">
             <span class="text-primary fw-bold text-uppercase tracking-wider">Operation Style</span>
             <h2 class="fw-bold mt-2">Precision-First Philosophy</h2>
@@ -348,21 +358,21 @@
         <div class="row g-4 mb-5">
             <div class="col-lg-6" data-aos="fade-right">
                 <div class="card h-100 border-0 shadow-sm p-4">
-                    <h5 class="fw-bold text-primary mb-3">
+                    <h3 class="fw-bold text-primary h5 mb-3">
                         <i class="bi bi-crosshair me-2"></i>Detailed & Accurate Reporting
-                    </h5>
+                    </h3>
                     <p class="text-muted">
                         Dr. Devashish provides detailed and accurate diagnostic reports that form the basis for successful clinical treatment. 
-                        We operates with a "precision-first" philosophy, personally supervising high-end scans and ensuring every report is 
+                        We operate with a "precision-first" philosophy, personally supervising high-end scans and ensuring every report is 
                         meticulously verified for accuracy.
                     </p>
                 </div>
             </div>
             <div class="col-lg-6" data-aos="fade-left">
                 <div class="card h-100 border-0 shadow-sm p-4">
-                    <h5 class="fw-bold text-primary mb-3">
+                    <h3 class="fw-bold text-primary h5 mb-3">
                         <i class="bi bi-people me-2"></i>Mentorship & Leadership
-                    </h5>
+                    </h3>
                     <p class="text-muted">
                         Leading a team of technicians and staff to maintain high diagnostic standards while personally overseeing the 
                         interpretation of intricate scans to ensure clinical accuracy.
@@ -377,7 +387,7 @@
                     <div class="mb-3 text-primary">
                         <i class="bi bi-lightning-charge fs-1"></i>
                     </div>
-                    <h5 class="card-title fw-bold">Innovation</h5>
+                    <h3 class="h5 card-title fw-bold">Innovation</h3>
                     <p class="card-text text-muted small">Implementing new imaging protocols that reduce scan time while improving image quality.</p>
                 </div>
             </div>
@@ -386,7 +396,7 @@
                     <div class="mb-3 text-primary">
                         <i class="bi bi-shield-check fs-1"></i>
                     </div>
-                    <h5 class="card-title fw-bold">Quality Standards</h5>
+                    <h3 class="h5 card-title fw-bold">Quality Standards</h3>
                     <p class="card-text text-muted small">NABH approval reflecting commitment to stringent quality control and patient safety protocols.</p>
                 </div>
             </div>
@@ -395,13 +405,11 @@
                     <div class="mb-3 text-primary">
                         <i class="bi bi-heart-pulse fs-1"></i>
                     </div>
-                    <h5 class="card-title fw-bold">Life-Saving Accuracy</h5>
+                    <h3 class="h5 card-title fw-bold">Life-Saving Accuracy</h3>
                     <p class="card-text text-muted small">Aiding doctors in making life-saving decisions with precise diagnostic interpretations.</p>
                 </div>
             </div>
         </div>
-
-        <hr class="my-5 opacity-10">
 
         <hr class="my-5 opacity-10">
 
@@ -417,7 +425,7 @@
                     <div class="mb-3 text-primary">
                         <i class="bi bi-universal-access-circle fs-1"></i>
                     </div>
-                    <h5 class="card-title fw-bold">Wheelchair Access</h5>
+                    <h3 class="h5 card-title fw-bold">Wheelchair Access</h3>
                     <p class="card-text text-muted small">Complete wheelchair accessibility for all diagnostic services.</p>
                 </div>
             </div>
@@ -426,7 +434,7 @@
                     <div class="mb-3 text-primary">
                         <i class="bi bi-ambulance fs-1"></i>
                     </div>
-                    <h5 class="card-title fw-bold">Free Ambulance Service</h5>
+                    <h3 class="h5 card-title fw-bold">Free Ambulance Service</h3>
                     <p class="card-text text-muted small">Complimentary ambulance for CT scan and MRI procedures.</p>
                 </div>
             </div>
@@ -435,7 +443,7 @@
                     <div class="mb-3 text-primary">
                         <i class="bi bi-file-earmark-pdf fs-1"></i>
                     </div>
-                    <h5 class="card-title fw-bold">Digital Reports</h5>
+                    <h3 class="h5 card-title fw-bold">Digital Reports</h3>
                     <p class="card-text text-muted small">Fast digital report delivery via email and WhatsApp.</p>
                 </div>
             </div>
@@ -444,7 +452,7 @@
                     <div class="mb-3 text-primary">
                         <i class="bi bi-clock-fill fs-1"></i>
                     </div>
-                    <h5 class="card-title fw-bold">Emergency Services</h5>
+                    <h3 class="h5 card-title fw-bold">Emergency Services</h3>
                     <p class="card-text text-muted small">Extended hours for emergency diagnostic needs.</p>
                 </div>
             </div>
@@ -462,20 +470,17 @@
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body p-4">
                         <div class="d-flex align-items-start mb-3">
-                            <img src="{{ url_for('static', filename='images/devasish.jpeg') }}" alt="Dr. Kumar Devashish" class="rounded-circle me-3" style="width: 80px; height: 80px;  border-radius:1rem;">
+                            <img src="{{ url_for('static', filename='images/devasish.jpeg') }}" alt="Dr. Kumar Devashish - Owner & Founder Director at Manya Imaging" class="rounded-circle me-3" style="width: 80px; height: 80px; border-radius:1rem; object-fit: cover;" loading="lazy" decoding="async" width="80" height="80">
                             <div>
-                                <h4 class="fw-bold mb-1">Dr. Kumar Devashish</h4>
-                                <p class="text-primary small mb-2">Owner & Founder Director & Senior Consultant Radiologist </p>
+                                <h3 class="h4 fw-bold mb-1">Dr. Kumar Devashish</h3>
+                                <p class="text-primary small mb-2">Owner & Founder Director & Senior Consultant Radiologist</p>
                                 <div class="mb-3">
-                            
-                            <span class="badge bg-light text-dark me-2">MBBS</span>
-                            <span class="badge bg-light text-dark me-2">FAGE</span>
-                            <span class="badge bg-primary">DMRD</span>
-                        </div>
+                                    <span class="badge bg-light text-dark me-2">MBBS</span>
+                                    <span class="badge bg-light text-dark me-2">FAGE</span>
+                                    <span class="badge bg-primary">DMRD</span>
+                                </div>
                             </div>
                         </div>
-                        
-
                         <p class="text-muted mb-2">Senior Consultant Radiologist with 20 years of experience in diagnostic imaging and interpretation.</p>
                         <p class="text-muted mb-0">Bringing extensive expertise in radiology to ensure accurate diagnoses and quality patient care.</p>
                     </div>
@@ -485,16 +490,15 @@
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body p-4">
                         <div class="d-flex align-items-start mb-3">
-                            <img src="{{ url_for('static', filename='images/swatimam.jpeg') }}" alt="Dr. Swati Raj" class="rounded-circle me-3" style="width: 80px; height: 80px; object-fit: cover;">
+                            <img src="{{ url_for('static', filename='images/swatimam.jpeg') }}" alt="Dr. Swati Raj - Co-Founder at Manya Imaging Diagnostic Center" class="rounded-circle me-3" style="width: 80px; height: 80px; object-fit: cover;" loading="lazy" decoding="async" width="80" height="80">
                             <div>
-                                <h4 class="fw-bold mb-1">Dr. Swati Raj</h4>
-                                <p class="text-primary small mb-2">co-founder & peridontist & implantologist</p>
+                                <h3 class="h4 fw-bold mb-1">Dr. Swati Raj</h3>
+                                <p class="text-primary small mb-2">Co-Founder & Periodontist & Implantologist</p>
                             </div>
                         </div>
                         <div class="mb-3">
                             <span class="badge bg-light text-dark me-2">BSC</span>
                             <span class="badge bg-light text-dark me-2">BDS</span>
-                            
                             <span class="badge bg-primary">MDS</span>
                         </div>
                        <p class="text-muted mb-0">Leading the vision and strategic direction of Manya Diagnostic Center with a commitment to excellence in healthcare diagnostics.</p>
@@ -503,57 +507,9 @@
             </div>
         </div>
 
-        <div class="text-center mb-5" data-aos="fade-up">
-            <span class="text-primary fw-bold text-uppercase tracking-wider">Uniqueness</span>
-            <h2 class="fw-bold mt-2">Why We Are Different</h2>
-        </div>
-
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                <div class="card h-100 border-0 shadow-sm service-card text-center p-3">
-                    <div class="card-body">
-                        <div class="mb-4 text-primary bg-primary bg-opacity-10 d-inline-block p-3 rounded-circle">
-                            <i class="bi bi-award fs-2"></i>
-                        </div>
-                        <h5 class="card-title fw-bold">Certified Quality</h5>
-                        <p class="card-text text-muted small">NABL accredited labs ensuring highest standards of
-                            testing.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                <div class="card h-100 border-0 shadow-sm service-card text-center p-3">
-                    <div class="card-body">
-                        <div class="mb-4 text-primary bg-primary bg-opacity-10 d-inline-block p-3 rounded-circle">
-                            <i class="bi bi-wallet2 fs-2"></i>
-                        </div>
-                        <h5 class="card-title fw-bold">Affordable Pricing</h5>
-                        <p class="card-text text-muted small">Quality diagnostics made accessible to everyone.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-                <div class="card h-100 border-0 shadow-sm service-card text-center p-3">
-                    <div class="card-body">
-                        <div class="mb-4 text-primary bg-primary bg-opacity-10 d-inline-block p-3 rounded-circle">
-                            <i class="bi bi-heart-pulse fs-2"></i>
-                        </div>
-                        <h5 class="card-title fw-bold">Patient Care</h5>
-                        <p class="card-text text-muted small">Comfortable environment with compassionate staff.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-                <div class="card h-100 border-0 shadow-sm service-card text-center p-3">
-                    <div class="card-body">
-                        <div class="mb-4 text-primary bg-primary bg-opacity-10 d-inline-block p-3 rounded-circle">
-                            <i class="bi bi-lightning fs-2"></i>
-                        </div>
-                        <h5 class="card-title fw-bold">Quick Turnaround</h5>
-                        <p class="card-text text-muted small">Most reports available within 24 hours.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="text-center" data-aos="fade-up">
+            <a href="{{ url_for('book_test') }}" class="btn btn-primary btn-lg rounded-pill px-5 me-3">Book an Appointment</a>
+            <a href="{{ url_for('contact') }}" class="btn btn-outline-primary btn-lg rounded-pill px-5">Contact Us</a>
         </div>
     </div>
 </section>

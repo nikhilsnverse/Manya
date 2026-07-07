@@ -1,5 +1,19 @@
 {% extends 'base.html' %}
 
+{% block schema %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": "https://manyadiagonistic.in/contact#contactpage",
+    "name": "Contact Manya Imaging & Diagnostic Point",
+    "description": "Contact Manya Imaging in Bilaspur for appointments and inquiries.",
+    "url": "https://manyadiagonistic.in/contact",
+    "mainEntity": {"@id": "https://manyadiagonistic.in#organization"}
+}
+</script>
+{% endblock %}
+
 {% block content %}
 <section class="bg-primary text-white py-5 text-center position-relative overflow-hidden">
     <div class="container position-relative z-1" data-aos="zoom-in">
@@ -13,62 +27,68 @@
         <div class="row g-5">
             <!-- Contact Info -->
             <div class="col-lg-5" data-aos="fade-right">
-                <h3 class="fw-bold text-secondary mb-4">Get In Touch</h3>
+                <h2 class="fw-bold text-secondary mb-4">Get In Touch</h2>
                 <div class="d-flex mb-4">
-                    <div class="me-3 text-primary fs-3"><i class="bi bi-geo-alt"></i></div>
-<div>
-                         <h5 class="fw-bold">Address</h5>
-                         <p class="text-muted mb-0">Manya Imaging and Diagnostic Point,<br>R.K Plaza,<br>Link Road, Bilaspur,<br>Chhattisgarh</p>
-                     </div>
+                    <div class="me-3 text-primary fs-3"><i class="bi bi-geo-alt" aria-hidden="true"></i></div>
+                    <div>
+                        <h3 class="h5 fw-bold">Main Center Address</h3>
+                        <p class="text-muted mb-0">Manya Imaging and Diagnostic Point,<br>R.K Plaza,<br>Link Road, Bilaspur,<br>Chhattisgarh - 495001</p>
+                    </div>
                 </div>
                 <div class="d-flex mb-4">
-                    <div class="me-3 text-primary fs-3"><i class="bi bi-telephone"></i></div>
-<div>
-                         <h5 class="fw-bold">Phone</h5>
-                         <p class="text-muted mb-0">07752 403073</p>
-                         <p class="text-muted mb-0">91310 53337</p>
-                         
-                     </div>
+                    <div class="me-3 text-primary fs-3"><i class="bi bi-geo-alt" aria-hidden="true"></i></div>
+                    <div>
+                        <h3 class="h5 fw-bold">Mangala Center Address</h3>
+                        <p class="text-muted mb-0">Real Heaven Apartment,<br>beside Achievers Public School,<br>Usal Bypass Road, Mangla Chowk,<br>Bilaspur, Chhattisgarh</p>
+                    </div>
                 </div>
                 <div class="d-flex mb-4">
-                    <div class="me-3 text-primary fs-3"><i class="bi bi-envelope"></i></div>
-<div>
-                         <h5 class="fw-bold">Email</h5>
-                         <p class="text-muted mb-0">manyaimagingndiagnosticpoint@gmail.com</p>
-                     </div>
+                    <div class="me-3 text-primary fs-3"><i class="bi bi-telephone" aria-hidden="true"></i></div>
+                    <div>
+                        <h3 class="h5 fw-bold">Phone</h3>
+                        <p class="text-muted mb-0"><a href="tel:+917752403073" class="text-decoration-none text-muted">07752 403073</a></p>
+                        <p class="text-muted mb-0"><a href="tel:+919131053337" class="text-decoration-none text-muted">91310 53337</a></p>
+                    </div>
                 </div>
                 <div class="d-flex mb-4">
-                    <div class="me-3 text-primary fs-3"><i class="bi bi-clock"></i></div>
-<div>
-                         <h5 class="fw-bold">Opening Hours</h5>
-                         <p class="text-muted mb-0">24 Hours × 365 Days</p>
-                         <p class="text-muted mb-0">(Including holidays like Holi, Diwali)</p>
-                         <p class="text-muted mb-0 small text-primary">Except Sonography</p>
-                     </div>
+                    <div class="me-3 text-primary fs-3"><i class="bi bi-envelope" aria-hidden="true"></i></div>
+                    <div>
+                        <h3 class="h5 fw-bold">Email</h3>
+                        <p class="text-muted mb-0"><a href="mailto:manyaimagingndiagnosticpoint@gmail.com" class="text-decoration-none text-muted">manyaimagingndiagnosticpoint@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="d-flex mb-4">
+                    <div class="me-3 text-primary fs-3"><i class="bi bi-clock" aria-hidden="true"></i></div>
+                    <div>
+                        <h3 class="h5 fw-bold">Opening Hours</h3>
+                        <p class="text-muted mb-0">Monday - Saturday: 7:00 AM – 9:00 PM</p>
+                        <p class="text-muted mb-0">Sunday: 7:00 AM – 2:00 PM</p>
+                        <p class="text-muted mb-0 small text-primary">Emergency Services: 24/7 Available</p>
+                    </div>
                 </div>
             </div>
 
             <!-- Contact Form -->
             <div class="col-lg-7" data-aos="fade-left">
                 <div class="card border-0 shadow-lg p-4 rounded-4">
-                    <h3 class="fw-bold mb-4 text-secondary">Send us a Message</h3>
+                    <h2 class="fw-bold mb-4 text-secondary h3">Send us a Message</h2>
                     <form class="contact-form">
                         <div class="row g-3">
                             <div class="col-md-6">
-                                <label for="c-name" class="form-label">Your Name</label>
-                                <input type="text" class="form-control" id="c-name" required>
+                                <label for="c-name" class="form-label">Your Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="c-name" name="name" required aria-required="true">
                             </div>
                             <div class="col-md-6">
-                                <label for="c-email" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="c-email" required>
+                                <label for="c-email" class="form-label">Email Address <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="c-email" name="email" required aria-required="true">
                             </div>
                             <div class="col-12">
-                                <label for="c-subject" class="form-label">Subject</label>
-                                <input type="text" class="form-control" id="c-subject" required>
+                                <label for="c-subject" class="form-label">Subject <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="c-subject" name="subject" required aria-required="true">
                             </div>
                             <div class="col-12">
-                                <label for="c-message" class="form-label">Message</label>
-                                <textarea class="form-control" id="c-message" rows="4" required></textarea>
+                                <label for="c-message" class="form-label">Message <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="c-message" name="message" rows="4" required aria-required="true"></textarea>
                             </div>
                             <div class="col-12">
                                 <button type="submit"
@@ -81,16 +101,17 @@
             </div>
         </div>
 
-        <!-- Google Map -->
+        <!-- Google Map - Main Center -->
         <div class="row mt-5">
             <div class="col-12">
-                <div class="card border-0 shadow-sm h-100">
+                <div class="card border-0 shadow-sm">
                     <div class="card-body p-1">
-                        <!-- Embedded Google Map for Bilaspur, Chhattisgarh (Generic Location) -->
+                        <h3 class="visually-hidden">Manya Imaging Main Center Location Map</h3>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.892206642503!2d82.1502122!3d22.0743408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a280b15fddf23b9%3A0xc52ef3fb4d5d9e23!2sManya%20Imaging%20and%20Diagnostic%20Point!5e0!3m2!1sen!2sin!4v1737470000000"
                             width="100%" height="450" style="border:0; border-radius: 5px;" allowfullscreen=""
-                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Manya Imaging and Diagnostic Point Location on Google Maps"></iframe>
                     </div>
                 </div>
             </div>
@@ -105,18 +126,18 @@
                             <span class="badge bg-primary rounded-pill px-3 py-1 mb-2">
                                 <i class="bi bi-geo-alt-fill me-1"></i> Visit Us
                             </span>
-                            <h4 class="fw-bold mt-2">Mangala Center</h4>
+                            <h3 class="fw-bold mt-2 h4">Mangala Center</h3>
                             <p class="text-muted mb-0">Real Heaven Apartment, beside Achievers Public School, Usal Bypass Road, Mangla Chowk, Bilaspur</p>
                         </div>
                         <hr>
                         <div class="d-flex flex-wrap gap-4 justify-content-center justify-content-lg-start">
                             <div>
                                 <p class="small text-muted mb-1"><i class="bi bi-telephone-fill text-primary me-1"></i> Phone</p>
-                                <p class="fw-bold mb-0">9131053337</p>
+                                <p class="fw-bold mb-0"><a href="tel:+919131053337" class="text-decoration-none text-dark">9131053337</a></p>
                             </div>
                             <div>
                                 <p class="small text-muted mb-1"><i class="bi bi-telephone-fill text-primary me-1"></i> Landline</p>
-                                <p class="fw-bold mb-0">07752-297977</p>
+                                <p class="fw-bold mb-0"><a href="tel:+917752297977" class="text-decoration-none text-dark">07752-297977</a></p>
                             </div>
                         </div>
                     </div>
@@ -126,37 +147,37 @@
                 <div class="row g-2">
                     <div class="col-4">
                         <div class="rounded-3 overflow-hidden shadow-sm">
-                            <img src="{{ url_for('static', filename='images/main_gate_mangala.jpeg') }}" class="w-100" alt="Main Gate">
+                            <img src="{{ url_for('static', filename='images/main_gate_mangala.jpeg') }}" class="w-100" alt="Mangala Center Main Gate - Manya Imaging Bilaspur" loading="lazy" decoding="async" width="200" height="150">
                         </div>
                     </div>
                     <div class="col-4">
                         <div class="rounded-3 overflow-hidden shadow-sm">
-                            <img src="{{ url_for('static', filename='images/reception_mangala.jpeg') }}" class="w-100" alt="Reception">
+                            <img src="{{ url_for('static', filename='images/reception_mangala.jpeg') }}" class="w-100" alt="Mangala Center Reception - Manya Imaging" loading="lazy" decoding="async" width="200" height="150">
                         </div>
                     </div>
                     <div class="col-4">
                         <div class="rounded-3 overflow-hidden shadow-sm">
-                            <img src="{{ url_for('static', filename='images/sitting_area.jpeg') }}" class="w-100" alt="Sitting Area">
+                            <img src="{{ url_for('static', filename='images/sitting_area.jpeg') }}" class="w-100" alt="Patient Sitting Area at Mangala Center" loading="lazy" decoding="async" width="200" height="150">
                         </div>
                     </div>
                     <div class="col-4">
                         <div class="rounded-3 overflow-hidden shadow-sm">
-                            <img src="{{ url_for('static', filename='images/ct_scan_mangala.jpeg') }}" class="w-100" alt="CT Scan">
+                            <img src="{{ url_for('static', filename='images/ct_scan_mangala.jpeg') }}" class="w-100" alt="CT Scan Machine at Mangala Center" loading="lazy" decoding="async" width="200" height="150">
                         </div>
                     </div>
                     <div class="col-4">
                         <div class="rounded-3 overflow-hidden shadow-sm">
-                            <img src="{{ url_for('static', filename='images/x_ray_bed_mangala.jpeg') }}" class="w-100" alt="X-Ray">
+                            <img src="{{ url_for('static', filename='images/x_ray_bed_mangala.jpeg') }}" class="w-100" alt="X-Ray Room at Mangala Center" loading="lazy" decoding="async" width="200" height="150">
                         </div>
                     </div>
                     <div class="col-4">
                         <div class="rounded-3 overflow-hidden shadow-sm">
-                            <img src="{{ url_for('static', filename='images/ambulance.jpeg') }}" class="w-100" alt="Ambulance">
+                            <img src="{{ url_for('static', filename='images/ambulance.jpeg') }}" class="w-100" alt="Ambulance Service at Manya Imaging" loading="lazy" decoding="async" width="200" height="150">
                         </div>
                     </div>
                     <div class="col-4">
                         <div class="rounded-3 overflow-hidden shadow-sm">
-                            <img src="{{ url_for('static', filename='images/ct_meachine_console.png') }}" class="w-100" alt="CT Console">
+                            <img src="{{ url_for('static', filename='images/ct_meachine_console.png') }}" class="w-100" alt="CT Scan Console at Mangala Center" loading="lazy" decoding="async" width="200" height="150">
                         </div>
                     </div>
                 </div>

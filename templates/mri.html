@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+{% import '_macros.html' as seo with context %}
+
+{% block schema %}
+{{ seo.service_schema('MRI Scan', '1.5 Tesla Siemens Sempra MRI Scan services at Manya Imaging in Bilaspur. Brain, spine, joint, abdominal and cardiac MRI imaging.', 'https://manyadiagonistic.in/mri') }}
+{% set faqs = [
+    {"question": "What is an MRI scan?", "answer": "MRI (Magnetic Resonance Imaging) uses a strong magnetic field and radio waves to create detailed images of organs and tissues. It does not use ionizing radiation, making it extremely safe."},
+    {"question": "Is MRI safe?", "answer": "Yes, MRI is one of the safest imaging modalities as it uses no ionizing radiation. However, patients with certain metallic implants, pacemakers, or claustrophobia should inform our staff before the scan."},
+    {"question": "How should I prepare for an MRI?", "answer": "Remove all metallic objects including jewelry, watches, and belts. Inform our staff about any implants, surgeries, or medical conditions. Wear comfortable clothing without metal fasteners."},
+    {"question": "How long does an MRI take?", "answer": "MRI scans typically take 30-60 minutes depending on the area being examined. Our 1.5 Tesla Siemens Sempra MRI offers faster scanning times while maintaining excellent image quality."},
+    {"question": "Can I have an MRI with dental implants or fillings?", "answer": "Most dental fillings and implants are safe for MRI. However, please inform our radiologist about any dental work. Our team at Manya Imaging will assess your specific situation before the scan."}
+] %}
+{{ seo.faq_schema(faqs) }}
+{% endblock %}
+
+{% block content %}
+<section class="bg-primary text-white py-5 text-center position-relative overflow-hidden">
+    <div class="container position-relative z-1" data-aos="zoom-in">
+        <h1 class="fw-bold display-4">MRI Scan in Bilaspur</h1>
+        <p class="lead opacity-75">1.5 Tesla Siemens Sempra MRI - High-Resolution Imaging</p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-8" data-aos="fade-right">
+                <h2 class="fw-bold text-secondary mb-4">Advanced MRI Scan Services</h2>
+                <p class="text-muted fs-5 mb-4">At Manya Imaging & Diagnostic Point, we offer 1.5 Tesla Siemens Sempra MRI for high-resolution diagnostic imaging with superior image quality.</p>
+                <div class="mb-4 p-4 bg-light rounded-4">
+                    <h3 class="fw-bold text-primary mb-3">MRI Procedures</h3>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Brain &amp; Spine MRI</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Joints &amp; Musculoskeletal MRI</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Abdominal MRI</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Angiography (MRA)</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Cardiac MRI</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Multiplanar Prostatic MRI</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Chest MRI</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Breast MRI</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-muted">Our 1.5 Tesla MRI system provides high-definition imaging for neurological, musculoskeletal, and full-body evaluations. All scans are supervised by senior radiologist Dr. Kumar Devashish.</p>
+            </div>
+            <div class="col-lg-4" data-aos="fade-left">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-4 text-center">
+                        <img src="{{ url_for('static', filename='images/equipment6.jpg') }}" alt="1.5 Tesla Siemens Sempra MRI Machine at Manya Imaging Bilaspur" class="img-fluid rounded-3 mb-3" loading="lazy" decoding="async" width="400" height="300">
+                        <h4 class="fw-bold text-primary">1.5 Tesla Siemens Sempra</h4>
+                        <p class="text-muted small">High-field magnet for superior image quality</p>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-3">Quick Information</h5>
+                        <ul class="list-unstyled small">
+                            <li class="mb-2"><i class="bi bi-clock text-primary me-2"></i>Scan Time: 30-60 min</li>
+                            <li class="mb-2"><i class="bi bi-person-check text-primary me-2"></i>Expert Radiologist: Dr. Kumar Devashish</li>
+                            <li class="mb-2"><i class="bi bi-shield-check text-primary me-2"></i>NABH Approved Facility</li>
+                            <li class="mb-2"><i class="bi bi-telephone text-primary me-2"></i>Call: 07752 403073</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="text-primary fw-bold text-uppercase tracking-wider">Why Choose Us</span>
+            <h2 class="fw-bold mt-2">Why Manya Imaging for MRI?</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card border-0 shadow-sm text-center p-4 h-100">
+                    <div class="mb-3 text-primary"><i class="bi bi-magnet fs-1"></i></div>
+                    <h5 class="fw-bold">1.5 Tesla MRI</h5>
+                    <p class="text-muted small">High-field Siemens Sempra for exceptional image resolution.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card border-0 shadow-sm text-center p-4 h-100">
+                    <div class="mb-3 text-primary"><i class="bi bi-person-badge fs-1"></i></div>
+                    <h5 class="fw-bold">Expert Supervision</h5>
+                    <p class="text-muted small">Scans reviewed by Dr. Kumar Devashish with 20+ years experience.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card border-0 shadow-sm text-center p-4 h-100">
+                    <div class="mb-3 text-primary"><i class="bi bi-shield-check fs-1"></i></div>
+                    <h5 class="fw-bold">Radiation-Free</h5>
+                    <p class="text-muted small">MRI uses no ionizing radiation, making it extremely safe.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="text-primary fw-bold text-uppercase tracking-wider">FAQ</span>
+            <h2 class="fw-bold mt-2">Frequently Asked Questions About MRI</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="mriFaqAccordion">
+                    {% for faq in faqs %}
+                    <div class="accordion-item border-0 mb-2 shadow-sm rounded-3">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed rounded-3 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq{{ loop.index }}" aria-expanded="false" aria-controls="faq{{ loop.index }}">
+                                {{ faq.question }}
+                            </button>
+                        </h3>
+                        <div id="faq{{ loop.index }}" class="accordion-collapse collapse" data-bs-parent="#mriFaqAccordion">
+                            <div class="accordion-body text-muted">{{ faq.answer }}</div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-primary text-white text-center">
+    <div class="container" data-aos="zoom-in">
+        <h2 class="fw-bold mb-3">Book Your MRI Scan Appointment</h2>
+        <p class="lead opacity-75 mb-4">Schedule your MRI scan at Manya Imaging in Bilaspur. Expert care with advanced technology.</p>
+        <a href="{{ url_for('book_test') }}" class="btn btn-light btn-lg rounded-pill px-5 fw-bold me-3">Book Now</a>
+        <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg rounded-pill px-5 fw-bold">Contact Us</a>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-4" data-aos="fade-up">
+            <h3 class="fw-bold text-secondary">Explore Our Other Services</h3>
+            <p class="text-muted">Comprehensive diagnostic solutions under one roof</p>
+        </div>
+        <div class="row g-3 justify-content-center" data-aos="fade-up">
+            <div class="col-md-3 col-6">
+                <a href="{{ url_for('ct_scan') }}" class="text-decoration-none">
+                    <div class="card border-0 shadow-sm text-center p-3 service-card">
+                        <div class="text-primary mb-2"><i class="bi bi-layers fs-2"></i></div>
+                        <h6 class="fw-bold mb-0">CT Scan</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-6">
+                <a href="{{ url_for('digital_xray') }}" class="text-decoration-none">
+                    <div class="card border-0 shadow-sm text-center p-3 service-card">
+                        <div class="text-primary mb-2"><i class="bi bi-file-medical fs-2"></i></div>
+                        <h6 class="fw-bold mb-0">Digital X-Ray</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-6">
+                <a href="{{ url_for('ultrasound') }}" class="text-decoration-none">
+                    <div class="card border-0 shadow-sm text-center p-3 service-card">
+                        <div class="text-primary mb-2"><i class="bi bi-soundwave fs-2"></i></div>
+                        <h6 class="fw-bold mb-0">Ultrasound</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-6">
+                <a href="{{ url_for('services') }}" class="text-decoration-none">
+                    <div class="card border-0 shadow-sm text-center p-3 service-card">
+                        <div class="text-primary mb-2"><i class="bi bi-grid-3x3-gap fs-2"></i></div>
+                        <h6 class="fw-bold mb-0">All Services</h6>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

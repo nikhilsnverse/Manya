@@ -1,0 +1,242 @@
+{% macro meta_tags(page_data, request) %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="{{ page_data.robots|default('index, follow') }}">
+<meta name="author" content="Manya Imaging and Diagnostic Point">
+<meta name="language" content="English">
+<meta name="theme-color" content="#10b981">
+<meta name="geo.region" content="IN-CT">
+<meta name="geo.placename" content="Bilaspur, Chhattisgarh">
+<meta name="geo.position" content="22.0743408;82.1502122">
+<meta name="ICBM" content="22.0743408, 82.1502122">
+<title>{{ page_data.title }}</title>
+<meta name="description" content="{{ page_data.description }}">
+<meta name="keywords" content="{{ page_data.keywords }}">
+<link rel="canonical" href="{{ page_data.canonical_url|default('https://manyadiagonistic.in' + request.path) }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ page_data.canonical_url|default('https://manyadiagonistic.in' + request.path) }}">
+<meta property="og:site_name" content="Manya Imaging & Diagnostic Point">
+<meta property="og:title" content="{{ page_data.og_title|default(page_data.title) }}">
+<meta property="og:description" content="{{ page_data.description }}">
+<meta property="og:image" content="{{ page_data.og_image|default('https://manyadiagonistic.in/static/images/manyalogo.png') }}">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page_data.og_title|default(page_data.title) }}">
+<meta name="twitter:description" content="{{ page_data.description }}">
+<meta name="twitter:image" content="{{ page_data.og_image|default('https://manyadiagonistic.in/static/images/manyalogo.png') }}">
+{% endmacro %}
+
+{% macro breadcrumb_schema(breadcrumbs) %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+    {% for crumb in breadcrumbs %}
+        {
+            "@type": "ListItem",
+            "position": {{ loop.index }},
+            "name": "{{ crumb.name|e }}",
+            "item": "https://manyadiagonistic.in{{ crumb.url }}"
+        }{% if not loop.last %},{% endif %}
+    {% endfor %}
+    ]
+}
+</script>
+{% endmacro %}
+
+{% macro render_breadcrumbs(breadcrumbs) %}
+<nav aria-label="Breadcrumb" class="py-2">
+    <ol class="breadcrumb mb-0">
+    {% for crumb in breadcrumbs %}
+        {% if loop.last %}
+            <li class="breadcrumb-item active" aria-current="page">{{ crumb.name }}</li>
+        {% else %}
+            <li class="breadcrumb-item"><a href="{{ crumb.url }}">{{ crumb.name }}</a></li>
+        {% endif %}
+    {% endfor %}
+    </ol>
+</nav>
+{% endmacro %}
+
+{% macro organization_schema() %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": ["MedicalBusiness", "Organization"],
+    "@id": "https://manyadiagonistic.in#organization",
+    "name": "Manya Imaging & Diagnostic Point",
+    "description": "Bilaspur's trusted diagnostic center offering CT Scan, Digital X-Ray, MRI, Ultrasound and advanced imaging services with NABH-approved quality standards.",
+    "url": "https://manyadiagonistic.in",
+    "telephone": "+91-7752403073",
+    "email": "manyaimagingndiagnosticpoint@gmail.com",
+    "logo": {
+        "@type": "ImageObject",
+        "url": "https://manyadiagonistic.in/static/images/manyalogo.png",
+        "width": 200,
+        "height": 200
+    },
+    "image": "https://manyadiagonistic.in/static/images/manyalogo.png",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "R.K Plaza, Link Road",
+        "addressLocality": "Bilaspur",
+        "addressRegion": "Chhattisgarh",
+        "postalCode": "495001",
+        "addressCountry": "IN"
+    },
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 22.0743408,
+        "longitude": 82.1502122
+    },
+    "openingHoursSpecification": [
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "07:00",
+            "closes": "21:00"
+        },
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "07:00",
+            "closes": "14:00"
+        }
+    ],
+    "areaServed": [
+        {"@type": "City", "name": "Bilaspur"},
+        {"@type": "City", "name": "Mungeli"},
+        {"@type": "City", "name": "Janjgir"},
+        {"@type": "City", "name": "Champa"},
+        {"@type": "City", "name": "Korba"},
+        {"@type": "City", "name": "Pali"}
+    ],
+    "priceRange": "$$",
+    "medicalSpecialty": ["Diagnostic Imaging", "Radiology"],
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-7752403073",
+        "contactType": "customer service",
+        "email": "manyaimagingndiagnosticpoint@gmail.com",
+        "availableLanguage": ["English", "Hindi"]
+    },
+    "sameAs": [
+        "https://www.google.com/maps?cid=14360568895584114467"
+    ]
+}
+</script>
+{% endmacro %}
+
+{% macro website_schema() %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://manyadiagonistic.in#website",
+    "url": "https://manyadiagonistic.in",
+    "name": "Manya Imaging & Diagnostic Point",
+    "description": "Bilaspur's trusted diagnostic center offering CT Scan, Digital X-Ray, and advanced imaging services.",
+    "publisher": {"@id": "https://manyadiagonistic.in#organization"},
+    "inLanguage": "en-IN",
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://manyadiagonistic.in/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+    }
+}
+</script>
+{% endmacro %}
+
+{% macro local_business_schema() %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://manyadiagonistic.in#localbusiness",
+    "parentOrganization": {"@id": "https://manyadiagonistic.in#organization"},
+    "name": "Manya Imaging & Diagnostic Point",
+    "image": "https://manyadiagonistic.in/static/images/manyalogo.png",
+    "telephone": "+91-7752403073",
+    "email": "manyaimagingndiagnosticpoint@gmail.com",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "R.K Plaza, Link Road",
+        "addressLocality": "Bilaspur",
+        "addressRegion": "Chhattisgarh",
+        "postalCode": "495001",
+        "addressCountry": "IN"
+    },
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 22.0743408,
+        "longitude": 82.1502122
+    },
+    "openingHoursSpecification": [
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "07:00",
+            "closes": "21:00"
+        },
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "07:00",
+            "closes": "14:00"
+        }
+    ],
+    "priceRange": "$$",
+    "areaServed": [
+        {"@type": "City", "name": "Bilaspur"},
+        {"@type": "City", "name": "Mungeli"},
+        {"@type": "City", "name": "Janjgir"},
+        {"@type": "City", "name": "Champa"},
+        {"@type": "City", "name": "Korba"},
+        {"@type": "City", "name": "Pali"}
+    ]
+}
+</script>
+{% endmacro %}
+
+{% macro faq_schema(faqs) %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+    {% for faq in faqs %}
+        {
+            "@type": "Question",
+            "name": "{{ faq.question|e }}",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "{{ faq.answer|e }}"
+            }
+        }{% if not loop.last %},{% endif %}
+    {% endfor %}
+    ]
+}
+</script>
+{% endmacro %}
+
+{% macro service_schema(name, description, url) %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "MedicalService",
+    "name": "{{ name|e }} - Manya Imaging & Diagnostic Point",
+    "description": "{{ description|e }}",
+    "url": "{{ url }}",
+    "provider": {"@id": "https://manyadiagonistic.in#organization"},
+    "areaServed": {"@type": "City", "name": "Bilaspur"},
+    "availableChannel": {
+        "@type": "ServiceChannel",
+        "servicePhone": {"@type": "ContactPoint", "telephone": "+91-7752403073"}
+    }
+}
+</script>
+{% endmacro %}

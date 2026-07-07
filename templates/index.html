@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<!-- New Hero Section -->
-<section class="hero-section-new">
-    <!-- Animated Background -->
+<!-- Hero Section -->
+<section class="hero-section-new" aria-label="Hero banner">
     <div class="hero-background">
         <div class="floating-shapes">
             <div class="shape shape-1"></div>
@@ -15,61 +14,50 @@
         <div class="gradient-overlay"></div>
     </div>
     
-    <!-- Hero Content -->
     <div class="hero-content">
         <div class="container">
             <div class="row align-items-center" style="min-height: 100vh;">
                 <div class="col-lg-6">
-                    <!-- NABH Badge -->
                     <div class="nabh-badge mb-4" data-aos="fade-down">
-                        <img src="{{ url_for('static', filename='images/nabhlogo.JPG') }}" alt="NABH Accredited" class="nabh-logo">
+                        <img src="{{ url_for('static', filename='images/nabhlogo.JPG') }}" alt="NABH Accredited Diagnostic Center in Bilaspur" class="nabh-logo" width="50" height="50" decoding="async">
                         <span class="badge-text">NABH Accredited</span>
                     </div>
                     
-                    <!-- Main Title -->
                     <div class="hero-title" data-aos="fade-right" data-aos-delay="100">
                         <h1 class="title-main">MANYA IMAGING</h1>
-                        <h2 class="title-sub">& DIAGNOSTIC POINT</h2>
+                        <h2 class="title-sub">&amp; DIAGNOSTIC POINT</h2>
                         <div class="title-underline"></div>
                     </div>
                     
-                    <!-- Tagline -->
                     <div class="hero-tagline" data-aos="fade-up" data-aos-delay="200">
                         <p class="tagline-text">BETTER IMAGING • BETTER DIAGNOSIS</p>
                         <p class="tagline-sub">WE CARE FROM INSIDE</p>
                     </div>
                     
-                    <!-- Key Features -->
                     <div class="hero-features" data-aos="fade-up" data-aos-delay="300">
                         <div class="feature-item">
-                            
                             <span>FIRST DIAGNOSTIC IN CHHATTISGARH TO GET NABH ACCREDITATION</span>
                         </div>
                         <div class="feature-item">
-                           
                             <span>FIRST AND ONLY DIAGNOSTIC TO START NON-INVASIVE CT CORONARY ANGIOGRAPHY IN BILASPUR AND SARGUJA DISTRICT</span>
                         </div>
                         <div class="feature-item">
-                            
                             <span>EXPERTISE AND FOCUS ON COMPLEX CARCINOMA CASES</span>
                         </div>
                         <div class="feature-item">
-                           
-                            <span>FIRST AND ONLY DIAGNOSTIC TO START NON-INVANSIVE CT CORONARY ANGIOGRAPHY IN BILASPUR AND SARGUJA DISTRICT</span>
+                            <span>FIRST AND ONLY DIAGNOSTIC TO START NON-INVASIVE CT CORONARY ANGIOGRAPHY IN BILASPUR AND SARGUJA DISTRICT</span>
                         </div>
                         <div class="feature-item">
-                            
                             <span>20+ YEARS OF EXCELLENCE</span>
                         </div>
                     </div>
                     
-                    <!-- CTA Buttons -->
                     <div class="hero-buttons" data-aos="zoom-in" data-aos-delay="400">
-                        <a href="{{ url_for('book_test') }}" class="btn-hero btn-primary">
+                        <a href="{{ url_for('book_test') }}" class="btn-hero btn-primary" aria-label="Book a diagnostic test">
                             <span>Book a Test</span>
                             <i class="bi bi-arrow-right"></i>
                         </a>
-                        <a href="{{ url_for('services') }}" class="btn-hero btn-secondary">
+                        <a href="{{ url_for('services') }}" class="btn-hero btn-secondary" aria-label="View our services">
                             <span>Our Services</span>
                             <i class="bi bi-grid-3x3-gap"></i>
                         </a>
@@ -77,9 +65,7 @@
                 </div>
                 
                 <div class="col-lg-6">
-                    <!-- Medical Imaging Showcase -->
                     <div class="medical-showcase" data-aos="fade-left" data-aos-delay="200">
-                        <!-- 3D Body Scanner Animation -->
                         <div class="body-scanner">
                             <div class="scanner-container">
                                 <div class="human-silhouette">
@@ -92,46 +78,44 @@
                             </div>
                         </div>
                         
-                        <!-- Imaging Services Grid -->
                         <div class="imaging-services">
-                            <div class="service-card" data-service="ct">
+                            <a href="{{ url_for('ct_scan') }}" class="service-card text-decoration-none" data-service="ct">
                                 <div class="service-icon">
                                     <i class="bi bi-layers"></i>
                                 </div>
                                 <h4>CT Scan</h4>
                                 <p>Advanced 3D Imaging</p>
                                 <div class="service-glow"></div>
-                            </div>
+                            </a>
                             
-                            <div class="service-card" data-service="mri">
+                            <a href="{{ url_for('mri') }}" class="service-card text-decoration-none" data-service="mri">
                                 <div class="service-icon">
                                     <i class="bi bi-magnet"></i>
                                 </div>
                                 <h4>MRI</h4>
                                 <p>High-Resolution Scans</p>
                                 <div class="service-glow"></div>
-                            </div>
+                            </a>
                             
-                            <div class="service-card" data-service="xray">
+                            <a href="{{ url_for('digital_xray') }}" class="service-card text-decoration-none" data-service="xray">
                                 <div class="service-icon">
                                     <i class="bi bi-radiation"></i>
                                 </div>
                                 <h4>X-Ray</h4>
                                 <p>Digital Radiography</p>
                                 <div class="service-glow"></div>
-                            </div>
+                            </a>
                             
-                            <div class="service-card" data-service="ultrasound">
+                            <a href="{{ url_for('ultrasound') }}" class="service-card text-decoration-none" data-service="ultrasound">
                                 <div class="service-icon">
                                     <i class="bi bi-heart-pulse"></i>
                                 </div>
                                 <h4>Ultrasound</h4>
                                 <p>Real-Time Imaging</p>
                                 <div class="service-glow"></div>
-                            </div>
+                            </a>
                         </div>
                         
-                        <!-- Technology Features -->
                         <div class="tech-features">
                             <div class="tech-feature">
                                 <i class="bi bi-shield-check"></i>
@@ -152,7 +136,6 @@
         </div>
     </div>
     
-    <!-- Scroll Indicator -->
     <div class="scroll-indicator">
         <div class="scroll-text">Scroll Down</div>
         <div class="scroll-arrow">
@@ -162,33 +145,33 @@
 </section>
 
 <!-- Statistics Section -->
-<section class="py-5 bg-white">
+<section class="py-5 bg-white" aria-label="Our achievements in numbers">
     <div class="container">
         <div class="row g-4 text-center">
-            <div class="col-md-4" data-aos="fade-up">
+            <article class="col-md-4" data-aos="fade-up">
                 <div class="p-4 rounded-4 shadow-sm bg-light">
                     <h2 class="display-4 fw-bold text-primary counter" data-target="20">0</h2>
                     <p class="text-muted fw-semibold">Years of Excellence</p>
                 </div>
-            </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            </article>
+            <article class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="p-4 rounded-4 shadow-sm bg-light">
                     <h2 class="display-4 fw-bold text-primary counter" data-target="300000">0</h2>
                     <p class="text-muted fw-semibold">Happy Patients</p>
                 </div>
-            </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+            </article>
+            <article class="col-md-4" data-aos="fade-up" data-aos-delay="400">
                 <div class="p-4 rounded-4 shadow-sm bg-light">
                     <h2 class="display-4 fw-bold text-primary counter" data-target="12">0</h2>
                     <p class="text-muted fw-semibold">Expert Doctors Team</p>
                 </div>
-            </div>
+            </article>
         </div>
     </div>
 </section>
 
 <!-- Introduction Section -->
-<section class="py-5">
+<article class="py-5" aria-label="About Manya Imaging">
     <div class="container py-4">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
@@ -199,6 +182,7 @@
                     Equipped with state-of-the-art technology and a team of experienced professionals, we ensure
                     accurate and timely reports to aid your medical treatment.
                 </p>
+                <p class="text-muted">Located in the heart of Bilaspur, Chhattisgarh, we are the first diagnostic center in the state to receive <strong>NABH accreditation</strong>, reflecting our commitment to international quality standards.</p>
                 <div class="d-flex align-items-center mt-4">
                     <div class="d-flex align-items-center me-4">
                         <i class="bi bi-check-circle-fill text-primary fs-4 me-2"></i>
@@ -212,16 +196,16 @@
                 <a href="{{ url_for('about') }}" class="btn btn-primary mt-4 rounded-pill px-4 text-white">Learn More
                     About Us</a>
             </div>
-            <div class="col-lg-6 text-center" data-aos="fade-left" >
-                <img src="{{ url_for('static', filename='images/cer.png') }}" alt="Medical Facility"
-                    class="img-fluid rounded-4 shadow-lg" >
+            <div class="col-lg-6 text-center" data-aos="fade-left">
+                <img src="{{ url_for('static', filename='images/cer.png') }}" alt="Manya Imaging Diagnostic Center - NABH Accredited Medical Facility in Bilaspur"
+                    class="img-fluid rounded-4 shadow-lg" loading="lazy" decoding="async" width="600" height="400">
             </div>
         </div>
     </div>
-</section>
+</article>
 
-<!-- Features / Services Section -->
-<section class="py-5 bg-light position-relative">
+<!-- Features / Core Values Section -->
+<section class="py-5 bg-light position-relative" aria-label="Core values">
     <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
             <span class="text-primary fw-bold text-uppercase tracking-wider">Our Core Values</span>
@@ -229,48 +213,104 @@
             <p class="text-muted">We prioritize your health with our core values</p>
         </div>
         <div class="row g-4">
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <article class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="card h-100 p-4 text-center service-card">
                     <div class="card-body">
-                        <div class="mb-4 text-primary bg-primary bg-opacity-10 d-inline-block p-3 rounded-circle">
+                        <div class="mb-4 text-white bg-primary d-inline-block p-3 rounded-circle">
                             <i class="bi bi-clock-history fs-2"></i>
                         </div>
-                        <h4 class="card-title fw-bold">Fast Reports</h4>
+                        <h3 class="card-title fw-bold h4">Fast Reports</h3>
                         <p class="card-text text-muted">Get your reports quickly online or at our center without
                             unnecessary delays.</p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            </article>
+            <article class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="card h-100 p-4 text-center service-card">
                     <div class="card-body">
-                        <div class="mb-4 text-primary bg-primary bg-opacity-10 d-inline-block p-3 rounded-circle">
+                        <div class="mb-4 text-white bg-primary d-inline-block p-3 rounded-circle">
                             <i class="bi bi-person-check fs-2"></i>
                         </div>
-                        <h4 class="card-title fw-bold">Expert Staff</h4>
-                        <p class="card-text text-muted">A team of qualified radiologists,  and technicians
+                        <h3 class="card-title fw-bold h4">Expert Staff</h3>
+                        <p class="card-text text-muted">A team of qualified radiologists and technicians
                             at your service.</p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            </article>
+            <article class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="card h-100 p-4 text-center service-card">
                     <div class="card-body">
-                        <div class="mb-4 text-primary bg-primary bg-opacity-10 d-inline-block p-3 rounded-circle">
+                        <div class="mb-4 text-white bg-primary d-inline-block p-3 rounded-circle">
                             <i class="bi bi-display fs-2"></i>
                         </div>
-                        <h4 class="card-title fw-bold">Modern Tech</h4>
+                        <h3 class="card-title fw-bold h4">Modern Tech</h3>
                         <p class="card-text text-muted">Using the latest diagnostic equipment for precise and reliable
                             results.</p>
                     </div>
                 </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Services Overview Section -->
+<section class="py-5" aria-label="Our diagnostic services">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="text-primary fw-bold text-uppercase tracking-wider">Our Services</span>
+            <h2 class="fw-bold mt-2">Comprehensive Diagnostic Services</h2>
+            <p class="text-muted">Advanced imaging and diagnostic solutions under one roof</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <a href="{{ url_for('ct_scan') }}" class="text-decoration-none">
+                    <div class="card border-0 shadow-sm text-center p-4 h-100 service-card">
+                        <div class="mb-3 text-primary"><i class="bi bi-layers fs-1"></i></div>
+                        <h3 class="h5 card-title fw-bold">CT Scan</h3>
+                        <p class="card-text text-muted small">160 Slice Advanced Cardiac CT for comprehensive body and cardiac imaging.</p>
+                        <span class="btn btn-outline-primary btn-sm rounded-pill px-3">Learn More</span>
+                    </div>
+                </a>
             </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                <a href="{{ url_for('mri') }}" class="text-decoration-none">
+                    <div class="card border-0 shadow-sm text-center p-4 h-100 service-card">
+                        <div class="mb-3 text-primary"><i class="bi bi-magnet fs-1"></i></div>
+                        <h3 class="h5 card-title fw-bold">MRI Scan</h3>
+                        <p class="card-text text-muted small">1.5 Tesla Siemens Sempra MRI for neurological and orthopedic diagnostics.</p>
+                        <span class="btn btn-outline-primary btn-sm rounded-pill px-3">Learn More</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                <a href="{{ url_for('digital_xray') }}" class="text-decoration-none">
+                    <div class="card border-0 shadow-sm text-center p-4 h-100 service-card">
+                        <div class="mb-3 text-primary"><i class="bi bi-file-medical fs-1"></i></div>
+                        <h3 class="h5 card-title fw-bold">Digital X-Ray</h3>
+                        <p class="card-text text-muted small">Full Room DR with image stitching software for high-quality radiography.</p>
+                        <span class="btn btn-outline-primary btn-sm rounded-pill px-3">Learn More</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                <a href="{{ url_for('ultrasound') }}" class="text-decoration-none">
+                    <div class="card border-0 shadow-sm text-center p-4 h-100 service-card">
+                        <div class="mb-3 text-primary"><i class="bi bi-heart-pulse fs-1"></i></div>
+                        <h3 class="h5 card-title fw-bold">Ultrasound</h3>
+                        <p class="card-text text-muted small">Hitachi Arietta S60 with 3D/4D imaging and Color Doppler.</p>
+                        <span class="btn btn-outline-primary btn-sm rounded-pill px-3">Learn More</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="text-center mt-4" data-aos="fade-up">
+            <a href="{{ url_for('services') }}" class="btn btn-primary rounded-pill px-5">View All Services</a>
         </div>
     </div>
 </section>
 
 <!-- Mangala Center Section -->
-<section class="py-5" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
+<section class="py-5" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);" aria-label="Mangala Center information">
     <div class="container">
         <div class="rounded-4 p-4 p-md-5" data-aos="fade-up">
             <div class="text-center mb-4">
@@ -298,43 +338,43 @@
             <div class="row g-3">
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="rounded-3 overflow-hidden bg-white bg-opacity-10 border border-white border-opacity-10">
-                        <img src="{{ url_for('static', filename='images/main_gate_mangala.jpeg') }}" class="w-100" alt="Main Gate">
+                        <img src="{{ url_for('static', filename='images/main_gate_mangala.jpeg') }}" class="w-100" alt="Mangala Center Main Gate - Manya Imaging Bilaspur" loading="lazy" decoding="async" width="300" height="200">
                         <p class="text-center small fw-semibold text-white-50 py-2 mb-0 bg-dark bg-opacity-50">Main Gate</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="rounded-3 overflow-hidden bg-white bg-opacity-10 border border-white border-opacity-10">
-                        <img src="{{ url_for('static', filename='images/reception_mangala.jpeg') }}" class="w-100" alt="Reception">
+                        <img src="{{ url_for('static', filename='images/reception_mangala.jpeg') }}" class="w-100" alt="Mangala Center Reception Area - Manya Imaging" loading="lazy" decoding="async" width="300" height="200">
                         <p class="text-center small fw-semibold text-white-50 py-2 mb-0 bg-dark bg-opacity-50">Reception</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="rounded-3 overflow-hidden bg-white bg-opacity-10 border border-white border-opacity-10">
-                        <img src="{{ url_for('static', filename='images/sitting_area.jpeg') }}" class="w-100" alt="Sitting Area">
+                        <img src="{{ url_for('static', filename='images/sitting_area.jpeg') }}" class="w-100" alt="Patient Sitting Area at Mangala Center Manya Imaging" loading="lazy" decoding="async" width="300" height="200">
                         <p class="text-center small fw-semibold text-white-50 py-2 mb-0 bg-dark bg-opacity-50">Sitting Area</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="rounded-3 overflow-hidden bg-white bg-opacity-10 border border-white border-opacity-10">
-                        <img src="{{ url_for('static', filename='images/ct_scan_mangala.jpeg') }}" class="w-100" alt="CT Scan">
+                        <img src="{{ url_for('static', filename='images/ct_scan_mangala.jpeg') }}" class="w-100" alt="CT Scan Machine at Mangala Center Manya Imaging" loading="lazy" decoding="async" width="300" height="200">
                         <p class="text-center small fw-semibold text-white-50 py-2 mb-0 bg-dark bg-opacity-50">CT Scan Machine</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="rounded-3 overflow-hidden bg-white bg-opacity-10 border border-white border-opacity-10">
-                        <img src="{{ url_for('static', filename='images/x_ray_bed_mangala.jpeg') }}" class="w-100" alt="X-Ray Bed">
+                        <img src="{{ url_for('static', filename='images/x_ray_bed_mangala.jpeg') }}" class="w-100" alt="X-Ray Room at Mangala Center Manya Imaging" loading="lazy" decoding="async" width="300" height="200">
                         <p class="text-center small fw-semibold text-white-50 py-2 mb-0 bg-dark bg-opacity-50">X-Ray Room</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="rounded-3 overflow-hidden bg-white bg-opacity-10 border border-white border-opacity-10">
-                        <img src="{{ url_for('static', filename='images/ambulance.jpeg') }}" class="w-100" alt="Ambulance">
+                        <img src="{{ url_for('static', filename='images/ambulance.jpeg') }}" class="w-100" alt="Ambulance Service at Manya Imaging Diagnostic Center" loading="lazy" decoding="async" width="300" height="200">
                         <p class="text-center small fw-semibold text-white-50 py-2 mb-0 bg-dark bg-opacity-50">Ambulance Service</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3">
                     <div class="rounded-3 overflow-hidden bg-white bg-opacity-10 border border-white border-opacity-10">
-                        <img src="{{ url_for('static', filename='images/ct_meachine_console.png') }}" class="w-100" alt="CT Scan Console">
+                        <img src="{{ url_for('static', filename='images/ct_meachine_console.png') }}" class="w-100" alt="CT Scan Console at Mangala Center Manya Imaging" loading="lazy" decoding="async" width="300" height="200">
                         <p class="text-center small fw-semibold text-white-50 py-2 mb-0 bg-dark bg-opacity-50">CT Scan Console</p>
                     </div>
                 </div>
@@ -344,7 +384,7 @@
 </section>
 
 <!-- Testimonials Section -->
-<section class="py-5">
+<section class="py-5" aria-label="Patient testimonials">
     <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
             <span class="text-primary fw-bold text-uppercase tracking-wider">Testimonials</span>
@@ -357,10 +397,10 @@
                         <div class="col-lg-8">
                             <div class="text-center bg-white p-5 rounded-4 shadow-sm border border-light">
                                 <i class="bi bi-quote fs-1 text-primary mb-3"></i>
-                                <p class="lead fst-italic text-muted">"Excellent service! The staff was very
+                                <blockquote class="lead fst-italic text-muted">"Excellent service! The staff was very
                                     professional and I got my reports on time. Highly recommended for anyone in
-                                    Bilaspur."</p>
-                                <h5 class="fw-bold mt-4">Rahul Sharma</h5>
+                                    Bilaspur."</blockquote>
+                                <figcaption class="fw-bold mt-4">Rahul Sharma</figcaption>
                                 <span class="small text-secondary">Patient</span>
                             </div>
                         </div>
@@ -371,8 +411,8 @@
                         <div class="col-lg-8">
                             <div class="text-center bg-white p-5 rounded-4 shadow-sm border border-light">
                                 <i class="bi bi-quote fs-1 text-primary mb-3"></i>
-                                <p class="lead fst-italic text-muted">"I had a great experience at Manya Imaging & Diagnostic Point! The wait was very short, and I didn't have to wait long for my tests. The lab is well connected, making it easy to find. The service was professional and efficient."</p>
-                                <h5 class="fw-bold mt-4">Abhi</h5>
+                                <blockquote class="lead fst-italic text-muted">"I had a great experience at Manya Imaging & Diagnostic Point! The wait was very short, and I didn't have to wait long for my tests. The lab is well connected, making it easy to find. The service was professional and efficient."</blockquote>
+                                <figcaption class="fw-bold mt-4">Abhi</figcaption>
                                 <span class="small text-secondary">Patient</span>
                             </div>
                         </div>
@@ -383,8 +423,8 @@
                         <div class="col-lg-8">
                             <div class="text-center bg-white p-5 rounded-4 shadow-sm border border-light">
                                 <i class="bi bi-quote fs-1 text-primary mb-3"></i>
-                                <p class="lead fst-italic text-muted">"I had a great experience at Manya Imaging & Diagnostic Point. The lab is very well-equipped with modern machines. The washrooms are clean and tidy, which is important for visitors. I received detailed reports and professional service."</p>
-                                <h5 class="fw-bold mt-4">Kamal Shastri</h5>
+                                <blockquote class="lead fst-italic text-muted">"I had a great experience at Manya Imaging & Diagnostic Point. The lab is very well-equipped with modern machines. The washrooms are clean and tidy, which is important for visitors. I received detailed reports and professional service."</blockquote>
+                                <figcaption class="fw-bold mt-4">Kamal Shastri</figcaption>
                                 <span class="small text-secondary">Patient</span>
                             </div>
                         </div>
@@ -395,8 +435,8 @@
                         <div class="col-lg-8">
                             <div class="text-center bg-white p-5 rounded-4 shadow-sm border border-light">
                                 <i class="bi bi-quote fs-1 text-primary mb-3"></i>
-                                <p class="lead fst-italic text-muted">"I recently visited Manya Imaging & Diagnostic Point and was thoroughly impressed with their exceptional customer service. The staff was not only professional but also incredibly compassionate, making the entire experience comfortable and stress-free."</p>
-                                <h5 class="fw-bold mt-4">Ashutosh</h5>
+                                <blockquote class="lead fst-italic text-muted">"I recently visited Manya Imaging & Diagnostic Point and was thoroughly impressed with their exceptional customer service. The staff was not only professional but also incredibly compassionate, making the entire experience comfortable and stress-free."</blockquote>
+                                <figcaption class="fw-bold mt-4">Ashutosh</figcaption>
                                 <span class="small text-secondary">Patient</span>
                             </div>
                         </div>
@@ -407,8 +447,8 @@
                         <div class="col-lg-8">
                             <div class="text-center bg-white p-5 rounded-4 shadow-sm border border-light">
                                 <i class="bi bi-quote fs-1 text-primary mb-3"></i>
-                                <p class="lead fst-italic text-muted">"Wonderful Diagnostic center in our Bilaspur with Latest Equipment's and great reporting of Dr Debasis and Very Cooperative Personnel. Wish all the best to Team Manya."</p>
-                                <h5 class="fw-bold mt-4">CA RAJESH MAMGAL AGRAWAL</h5>
+                                <blockquote class="lead fst-italic text-muted">"Wonderful Diagnostic center in our Bilaspur with Latest Equipment's and great reporting of Dr Debasis and Very Cooperative Personnel. Wish all the best to Team Manya."</blockquote>
+                                <figcaption class="fw-bold mt-4">CA Rajesh Mamgal Agrawal</figcaption>
                                 <span class="small text-secondary">Patient</span>
                             </div>
                         </div>
@@ -419,9 +459,9 @@
                         <div class="col-lg-8">
                             <div class="text-center bg-white p-5 rounded-4 shadow-sm border border-light">
                                 <i class="bi bi-quote fs-1 text-primary mb-3"></i>
-                                <p class="lead fst-italic text-muted">"Very clean and hygienic environment. The online
-                                    report facility is a great time saver. Keep up the good work!"</p>
-                                <h5 class="fw-bold mt-4">Priya Verma</h5>
+                                <blockquote class="lead fst-italic text-muted">"Very clean and hygienic environment. The online
+                                    report facility is a great time saver. Keep up the good work!"</blockquote>
+                                <figcaption class="fw-bold mt-4">Priya Verma</figcaption>
                                 <span class="small text-secondary">Patient</span>
                             </div>
                         </div>
@@ -429,12 +469,12 @@
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
-                data-bs-slide="prev">
+                data-bs-slide="prev" aria-label="Previous testimonial">
                 <span class="carousel-control-prev-icon bg-primary rounded-circle" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
-                data-bs-slide="next">
+                data-bs-slide="next" aria-label="Next testimonial">
                 <span class="carousel-control-next-icon bg-primary rounded-circle" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>

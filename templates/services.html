@@ -10,131 +10,130 @@
 
 <section class="py-5">
     <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="text-primary fw-bold text-uppercase tracking-wider">Core Services</span>
+            <h2 class="fw-bold mt-2">Advanced Diagnostic Imaging Services</h2>
+            <p class="text-muted">State-of-the-art equipment for accurate diagnosis and timely reports</p>
+        </div>
         <div class="row g-4">
             <!-- Service 1: MRI -->
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
-                <div class="card h-100 shadow-sm service-card border-0" data-bs-toggle="modal"
-                    data-bs-target="#modalMRI">
+                <div class="card h-100 shadow-sm service-card border-0">
                     <div class="card-body text-center py-5">
                         <div class="mb-4 text-primary bg-primary bg-opacity-10 d-inline-block p-3 rounded-circle">
                             <i class="bi bi-magnet fs-1"></i>
                         </div>
-                        <h4 class="card-title fw-bold">MRI Scan</h4>
+                        <h3 class="card-title fw-bold h4">MRI Scan</h3>
                         <p class="card-text text-muted">1.5 Tesla Siemens Sempra - High-resolution imaging for Neurological and Orthopedic diagnostics.</p>
-                        <button class="btn btn-outline-primary btn-sm mt-3 rounded-pill px-4">View Details</button>
+                        <a href="{{ url_for('mri') }}" class="btn btn-outline-primary btn-sm mt-3 rounded-pill px-4">View Details</a>
                     </div>
                 </div>
             </div>
 
             <!-- Service 2: CT Scan -->
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="card h-100 shadow-sm service-card border-0" data-bs-toggle="modal"
-                    data-bs-target="#modalCT">
+                <div class="card h-100 shadow-sm service-card border-0">
                     <div class="card-body text-center py-5">
                         <div class="mb-4 text-primary bg-primary bg-opacity-10 d-inline-block p-3 rounded-circle">
                             <i class="bi bi-layers fs-1"></i>
                         </div>
-                        <h4 class="card-title fw-bold">CT Scan</h4>
+                        <h3 class="card-title fw-bold h4">CT Scan</h3>
                         <p class="card-text text-muted">160 Slice Highly Advanced Cardiac CT - Comprehensive body and cardiac imaging.</p>
-                        <button class="btn btn-outline-primary btn-sm mt-3 rounded-pill px-4">View Details</button>
+                        <a href="{{ url_for('ct_scan') }}" class="btn btn-outline-primary btn-sm mt-3 rounded-pill px-4">View Details</a>
                     </div>
                 </div>
             </div>
 
             <!-- Service 3: Ultrasound -->
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card h-100 shadow-sm service-card border-0" data-bs-toggle="modal"
-                    data-bs-target="#modalUSG">
+                <div class="card h-100 shadow-sm service-card border-0">
                     <div class="card-body text-center py-5">
                         <div class="mb-4 text-primary bg-primary bg-opacity-10 d-inline-block p-3 rounded-circle">
                             <i class="bi bi-soundwave fs-1"></i>
                         </div>
-                        <h4 class="card-title fw-bold">Ultrasound (USG)</h4>
+                        <h3 class="card-title fw-bold h4">Ultrasound (USG)</h3>
                         <p class="card-text text-muted">High-End Hitachi Arietta S60 - Advanced 3D/4D imaging and Color Doppler capabilities.</p>
-                        <button class="btn btn-outline-primary btn-sm mt-3 rounded-pill px-4">View Details</button>
+                        <a href="{{ url_for('ultrasound') }}" class="btn btn-outline-primary btn-sm mt-3 rounded-pill px-4">View Details</a>
                     </div>
                 </div>
             </div>
 
             <!-- Service 4: X-Ray -->
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="card h-100 shadow-sm service-card border-0" data-bs-toggle="modal"
-                    data-bs-target="#modalXray">
+                <div class="card h-100 shadow-sm service-card border-0">
                     <div class="card-body text-center py-5">
                         <div class="mb-4 text-primary bg-primary bg-opacity-10 d-inline-block p-3 rounded-circle">
                             <i class="bi bi-file-medical fs-1"></i>
                         </div>
-                        <h4 class="card-title fw-bold">Digital X-Ray</h4>
+                        <h3 class="card-title fw-bold h4">Digital X-Ray</h3>
                         <p class="card-text text-muted">Full Room DR with Image Stitching Software - High-quality digital radiography.</p>
-                        <button class="btn btn-outline-primary btn-sm mt-3 rounded-pill px-4">View Details</button>
+                        <a href="{{ url_for('digital_xray') }}" class="btn btn-outline-primary btn-sm mt-3 rounded-pill px-4">View Details</a>
                     </div>
                 </div>
             </div>
 
-           
-
-            <!-- Service 6: Color Doppler -->
+            <!-- Service 5: Color Doppler -->
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
                 <div class="card h-100 shadow-sm service-card border-0">
                     <div class="card-body text-center py-5">
                         <div class="mb-4 text-primary bg-primary bg-opacity-10 d-inline-block p-3 rounded-circle">
                             <i class="bi bi-water fs-1"></i>
                         </div>
-                        <h4 class="card-title fw-bold">Color Doppler</h4>
+                        <h3 class="card-title fw-bold h4">Color Doppler</h3>
                         <p class="card-text text-muted">Advanced vascular imaging and blood flow assessment.</p>
+                        <a href="{{ url_for('ultrasound') }}" class="btn btn-outline-primary btn-sm mt-3 rounded-pill px-4">Learn More</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Service 7: ECG -->
+            <!-- Service 6: ECG -->
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
-                <div class="card h-100 shadow-sm service-card border-0" data-bs-toggle="modal"
-                    data-bs-target="#modalECG">
+                <div class="card h-100 shadow-sm service-card border-0">
                     <div class="card-body text-center py-5">
                         <div class="mb-4 text-primary bg-primary bg-opacity-10 d-inline-block p-3 rounded-circle">
                             <i class="bi bi-activity fs-1"></i>
                         </div>
-                        <h4 class="card-title fw-bold">ECG</h4>
+                        <h3 class="card-title fw-bold h4">ECG</h3>
                         <p class="card-text text-muted">12-lead electrocardiography for heart rhythm analysis.</p>
-                        <button class="btn btn-outline-primary btn-sm mt-3 rounded-pill px-4">View Details</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Service 8: EEG -->
+            <!-- Service 7: EEG -->
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="700">
                 <div class="card h-100 shadow-sm service-card border-0">
                     <div class="card-body text-center py-5">
                         <div class="mb-4 text-primary bg-primary bg-opacity-10 d-inline-block p-3 rounded-circle">
                             <i class="bi bi-cpu fs-1"></i>
                         </div>
-                        <h4 class="card-title fw-bold">EEG</h4>
+                        <h3 class="card-title fw-bold h4">EEG</h3>
                         <p class="card-text text-muted">Electroencephalography for brain activity monitoring.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Service 9: CT Coronary Angiography -->
+            <!-- Service 8: CT Coronary Angiography -->
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="800">
                 <div class="card h-100 shadow-sm service-card border-0">
                     <div class="card-body text-center py-5">
                         <div class="mb-4 text-primary bg-primary bg-opacity-10 d-inline-block p-3 rounded-circle">
                             <i class="bi bi-heart-pulse fs-1"></i>
                         </div>
-                        <h4 class="card-title fw-bold">CT Coronary Angiography</h4>
+                        <h3 class="card-title fw-bold h4">CT Coronary Angiography</h3>
                         <p class="card-text text-muted">Non-invasive heart vessel blockage detection.</p>
+                        <a href="{{ url_for('ct_scan') }}" class="btn btn-outline-primary btn-sm mt-3 rounded-pill px-4">Learn More</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Service 10: OPG (Dental X-ray) -->
+            <!-- Service 9: OPG -->
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="900">
                 <div class="card h-100 shadow-sm service-card border-0">
                     <div class="card-body text-center py-5">
                         <div class="mb-4 text-primary bg-primary bg-opacity-10 d-inline-block p-3 rounded-circle">
                             <i class="bi bi-x-circle fs-1"></i>
                         </div>
-                        <h4 class="card-title fw-bold">OPG (Dental X-ray)</h4>
+                        <h3 class="card-title fw-bold h4">OPG (Dental X-ray)</h3>
                         <p class="card-text text-muted">Specialized dental imaging for comprehensive oral assessment.</p>
                     </div>
                 </div>
@@ -192,7 +191,7 @@
     </div>
 </section>
 
-<!-- Special Technology Section -->
+<!-- Technology Section -->
 <section class="py-5">
     <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
@@ -212,6 +211,7 @@
                             Under the supervision of senior radiologists, this technology enables precise diagnosis 
                             of complex conditions.
                         </p>
+                        <a href="{{ url_for('mri') }}" class="btn btn-outline-primary btn-sm rounded-pill px-3">View MRI Service</a>
                     </div>
                 </div>
             </div>
@@ -225,6 +225,7 @@
                             Offers rapid and detailed cross-sectional views for trauma and internal medicine. 
                             Provides comprehensive imaging for emergency situations and detailed anatomical studies.
                         </p>
+                        <a href="{{ url_for('ct_scan') }}" class="btn btn-outline-primary btn-sm rounded-pill px-3">View CT Scan Service</a>
                     </div>
                 </div>
             </div>
@@ -254,171 +255,21 @@
                         <i class="bi bi-x-circle fs-1"></i>
                     </div>
                     <h5 class="card-title fw-bold">Specialised Scans</h5>
-                    <p class="card-text text-muted small">Includes OPG (Dental X-ray) and potentially CBCT for comprehensive dental imaging.</p>
+                    <p class="card-text text-muted small">Includes OPG (Dental X-ray) and CBCT for comprehensive dental imaging.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Modals -->
-<!-- MRI Modal -->
-<div class="modal fade" id="modalMRI" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title fw-bold">MRI Scan Services</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p><strong>1.5 Tesla Siemens Sempra MRI</strong> - State-of-the-art imaging services:</p>
-                <ul>
-                    <li>Brain & Spine MRI</li>
-                    <li>Joints & Musculoskeletal MRI</li>
-                    <li>Abdominal MRI</li>
-                    <li>Angiography (MRA)</li>
-                    <li>Cardiac MRI</li>
-                    <li>Multiplaner Prostatic MRI</li>
-                    <li>Chest MRI</li>
-                    <li>Brest MRI</li>
-                </ul>
-                <p class="text-muted small">High-field magnet for superior image quality and faster scans.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a href="{{ url_for('book_test') }}" class="btn btn-primary">Book Now</a>
-            </div>
-        </div>
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white text-center">
+    <div class="container" data-aos="zoom-in">
+        <h2 class="fw-bold mb-3">Need Help Choosing the Right Test?</h2>
+        <p class="lead opacity-75 mb-4">Our expert team can guide you to the right diagnostic service for your needs.</p>
+        <a href="{{ url_for('book_test') }}" class="btn btn-light btn-lg rounded-pill px-5 fw-bold me-3">Book an Appointment</a>
+        <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg rounded-pill px-5 fw-bold">Contact Us</a>
     </div>
-</div>
-
-<!-- CT Modal -->
-<div class="modal fade" id="modalCT" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title fw-bold">CT Scan Services</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p><strong>160 Slice Highly Advanced Cardiac CT</strong> - Comprehensive imaging for:</p>
-                <ul>
-                    <li>Head & Neck CT</li>
-                    <li>Chest & Abdomen CT</li>
-                    <li>Cardiac CT Angiography</li>
-                    <li>3D Reconstructions</li>
-                </ul>
-                <p class="text-muted small">Ultra-fast scanning with exceptional cardiac imaging capabilities.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a href="{{ url_for('book_test') }}" class="btn btn-primary">Book Now</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- USG Modal -->
-<div class="modal fade" id="modalUSG" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title fw-bold">Ultrasound Services</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p><strong>High-End Hitachi Arietta S60 Ultrasound</strong> - Advanced imaging for:</p>
-                <ul>
-                    <li>Pregnancy Scans (Anomaly, Growth)</li>
-                    <li>Abdominal USG</li>
-                    <li>Color Doppler Studies</li>
-                    <li>Small Parts (Thyroid, Breast, etc.)</li>
-                </ul>
-                <p class="text-muted small">Premium ultrasound system with superior image clarity.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a href="{{ url_for('book_test') }}" class="btn btn-primary">Book Now</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- X-Ray Modal -->
-<div class="modal fade" id="modalXray" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title fw-bold">Digital X-Ray</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p><strong>Full Room DR with Image Stitching Software</strong> - Digital radiography for:</p>
-                <ul>
-                    <li>Chest X-Ray</li>
-                    <li>Bones & Joints</li>
-                    <li>Spine X-Ray</li>
-                    <li>Special Procedures (Barium, HSG)</li>
-                </ul>
-                <p class="text-muted small">Advanced digital system with stitching for long bone imaging.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a href="{{ url_for('book_test') }}" class="btn btn-primary">Book Now</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Path Modal -->
-<div class="modal fade" id="modalPath" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title fw-bold">Pathology Services</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>Fully automated lab providing:</p>
-                <ul>
-                    <li>Hematology (CBC, ESR)</li>
-                    <li>Biochemistry (Sugar, LFT, KFT)</li>
-                    <li>Hormonal Assays (Thyroid, Fertility)</li>
-                    <li>Microbiology & Serology</li>
-                </ul>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a href="{{ url_for('book_test') }}" class="btn btn-primary">Book Now</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ECG Modal -->
-<div class="modal fade" id="modalECG" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title fw-bold">ECG Services</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>Professional ECG services for cardiac assessment:</p>
-                <ul>
-                    <li>12-Lead Electrocardiography</li>
-                    <li>Heart Rhythm Analysis</li>
-                    <li>Chest Pain Evaluation</li>
-                    <li>Pre-operative Cardiac Assessment</li>
-                </ul>
-                <p class="text-muted small">Trained technicians provide accurate readings for better diagnosis.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a href="{{ url_for('book_test') }}" class="btn btn-primary">Book Now</a>
-            </div>
-        </div>
-    </div>
-</div>
+</section>
 
 {% endblock %}

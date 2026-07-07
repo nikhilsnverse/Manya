@@ -1,5 +1,19 @@
 {% extends 'base.html' %}
 
+{% block schema %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "@id": "https://manyadiagonistic.in/gallery#gallery",
+    "name": "Manya Imaging & Diagnostic Point Photo Gallery",
+    "description": "Virtual tour of Manya Imaging & Diagnostic Point facilities, equipment, and patient care environment in Bilaspur.",
+    "url": "https://manyadiagonistic.in/gallery",
+    "mainEntity": {"@id": "https://manyadiagonistic.in#organization"}
+}
+</script>
+{% endblock %}
+
 {% block content %}
 <section class="bg-primary text-white py-5 text-center position-relative overflow-hidden">
     <div class="container position-relative z-1" data-aos="zoom-in">
@@ -11,79 +25,72 @@
 <section class="py-5">
     <div class="container">
         <div class="row g-4">
-            <!-- Image 1: Building -->
             <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="0">
                 <div class="card border-0 shadow-sm h-100 overflow-hidden service-card">
                     <img src="{{ url_for('static', filename='images/reception.jpeg') }}" class="card-img-top"
-                        alt="Manya Diagnostic Center Building" style="height: 250px; object-fit: cover;">
+                        alt="Manya Diagnostic Center Reception Area in Bilaspur" style="height: 250px; object-fit: cover;" loading="lazy" decoding="async" width="400" height="250">
                     <div class="card-body text-center">
-                        <p class="card-text text-muted">RECEPTION</p>
+                        <p class="card-text text-muted fw-semibold">Reception</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Image 2: Reception -->
             <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
                 <div class="card border-0 shadow-sm h-100 overflow-hidden service-card">
                     <img src="{{ url_for('static', filename='images/equipment1.jpeg') }}" class="card-img-top"
-                        alt="Reception Area" style="height: 250px; object-fit: cover;">
+                        alt="160 Slice uCT 780 CT Scan Machine at Manya Imaging Bilaspur" style="height: 250px; object-fit: cover;" loading="lazy" decoding="async" width="400" height="250">
                     <div class="card-body text-center">
-                        <p class="card-text text-muted">160 SLICE uCT 780 MACHINE</p>
+                        <p class="card-text text-muted fw-semibold">160 Slice uCT 780 Machine</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Image 3: MRI Room -->
             <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
                 <div class="card border-0 shadow-sm h-100 overflow-hidden service-card">
                     <img src="{{ url_for('static', filename='images/equipment2.jpeg') }}" class="card-img-top"
-                        alt="MRI Room" style="height: 250px; object-fit: cover;">
+                        alt="Advanced CT Scan Console Room at Manya Imaging" style="height: 250px; object-fit: cover;" loading="lazy" decoding="async" width="400" height="250">
                     <div class="card-body text-center">
-                        <p class="card-text text-muted">ADVANCE CT-CONSOLE ROOM</p>
+                        <p class="card-text text-muted fw-semibold">Advance CT-Console Room</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Image 4: Laboratory -->
             <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
                 <div class="card border-0 shadow-sm h-100 overflow-hidden service-card">
                     <img src="{{ url_for('static', filename='images/equipment3.jpeg') }}" class="card-img-top"
-                        alt="Laboratory" style="height: 250px; object-fit: cover;">
+                        alt="Full Room DR Digital X-Ray Machine at Manya Imaging Bilaspur" style="height: 250px; object-fit: cover;" loading="lazy" decoding="async" width="400" height="250">
                     <div class="card-body text-center">
-                        <p class="card-text text-muted">ADVANCE FULL ROOM DR X-RAY</p>
+                        <p class="card-text text-muted fw-semibold">Advance Full Room DR X-Ray</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Image 4: Laboratory -->
             <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
                 <div class="card border-0 shadow-sm h-100 overflow-hidden service-card">
                     <img src="{{ url_for('static', filename='images/equipment4.jpeg') }}" class="card-img-top"
-                        alt="Laboratory" style="height: 250px; object-fit: cover;">
+                        alt="Advanced CT Scan Room at Manya Diagnostic Center" style="height: 250px; object-fit: cover;" loading="lazy" decoding="async" width="400" height="250">
                     <div class="card-body text-center">
-                        <p class="card-text text-muted">Advance CT-SCAN room</p>
+                        <p class="card-text text-muted fw-semibold">Advance CT-Scan Room</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Image 4: Laboratory -->
             <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
                 <div class="card border-0 shadow-sm h-100 overflow-hidden service-card">
                     <img src="{{ url_for('static', filename='images/equipment5.jpeg') }}" class="card-img-top"
-                        alt="Laboratory" style="height: 250px; object-fit: cover;">
+                        alt="Hitachi Arietta S60 Ultrasound Machine at Manya Imaging" style="height: 250px; object-fit: cover;" loading="lazy" decoding="async" width="400" height="250">
                     <div class="card-body text-center">
-                        <p class="card-text text-muted">HIGH-TECH SONOGRAPHY ROOM </p>
+                        <p class="card-text text-muted fw-semibold">High-Tech Sonography Room</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Building -->
             <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="600">
                 <div class="card border-0 shadow-sm h-100 overflow-hidden service-card">
                     <img src="{{ url_for('static', filename='images/manya.jpg') }}" class="card-img-top"
-                        alt="Manya Diagnostic Center Building" style="height: 250px; object-fit: cover;">
+                        alt="Manya Imaging and Diagnostic Center Building Exterior Bilaspur" style="height: 250px; object-fit: cover;" loading="lazy" decoding="async" width="400" height="250">
                     <div class="card-body text-center">
-                        <p class="card-text text-muted">Diagnostic Center Building</p>
+                        <p class="card-text text-muted fw-semibold">Diagnostic Center Building</p>
                     </div>
                 </div>
             </div>
@@ -91,9 +98,9 @@
             <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="600">
                 <div class="card border-0 shadow-sm h-100 overflow-hidden service-card">
                     <img src="{{ url_for('static', filename='images/equipment6.jpg') }}" class="card-img-top"
-                        alt="Manya Diagnostic Center Building" style="height: 250px; object-fit: cover;">
+                        alt="1.5 Tesla Siemens Sempra MRI Machine at Manya Imaging Bilaspur" style="height: 250px; object-fit: cover;" loading="lazy" decoding="async" width="400" height="250">
                     <div class="card-body text-center">
-                        <p class="card-text text-muted">MRI 1.5T SIMENS MRI MACHINE</p>
+                        <p class="card-text text-muted fw-semibold">MRI 1.5T Siemens MRI Machine</p>
                     </div>
                 </div>
             </div>
@@ -101,9 +108,9 @@
             <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="600">
                 <div class="card border-0 shadow-sm h-100 overflow-hidden service-card">
                     <img src="{{ url_for('static', filename='images/equipment7.jpeg') }}" class="card-img-top"
-                        alt="Manya Diagnostic Center Building" style="height: 250px; object-fit: cover;">
+                        alt="EEG Machine for Brain Activity Monitoring at Manya Imaging" style="height: 250px; object-fit: cover;" loading="lazy" decoding="async" width="400" height="250">
                     <div class="card-body text-center">
-                        <p class="card-text text-muted">EEG MACHINE</p>
+                        <p class="card-text text-muted fw-semibold">EEG Machine</p>
                     </div>
                 </div>
             </div>
@@ -111,9 +118,9 @@
             <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="600">
                 <div class="card border-0 shadow-sm h-100 overflow-hidden service-card">
                     <img src="{{ url_for('static', filename='images/equipment8.jpeg') }}" class="card-img-top"
-                        alt="Manya Diagnostic Center Building" style="height: 250px; object-fit: cover;">
+                        alt="ECG Machine for Heart Rhythm Analysis at Manya Imaging" style="height: 250px; object-fit: cover;" loading="lazy" decoding="async" width="400" height="250">
                     <div class="card-body text-center">
-                        <p class="card-text text-muted">ECG MACHINE</p>
+                        <p class="card-text text-muted fw-semibold">ECG Machine</p>
                     </div>
                 </div>
             </div>

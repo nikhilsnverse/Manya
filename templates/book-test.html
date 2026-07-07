@@ -1,5 +1,19 @@
 {% extends 'base.html' %}
 
+{% block schema %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://manyadiagonistic.in/book-test#webpage",
+    "name": "Book a Test - Manya Imaging & Diagnostic Point",
+    "description": "Schedule your diagnostic tests online at Manya Imaging in Bilaspur.",
+    "url": "https://manyadiagonistic.in/book-test",
+    "mainEntity": {"@id": "https://manyadiagonistic.in#organization"}
+}
+</script>
+{% endblock %}
+
 {% block content %}
 <section class="bg-primary text-white py-5 text-center position-relative overflow-hidden">
     <div class="container position-relative z-1" data-aos="zoom-in">
@@ -14,22 +28,22 @@
             <div class="col-lg-8" data-aos="fade-up">
                 <div class="card shadow-lg rounded-4 border-0">
                     <div class="card-body p-4 p-md-5">
-                        <h3 class="fw-bold mb-4 text-primary">Appointment Request Form</h3>
+                        <h2 class="fw-bold mb-4 text-primary h3">Appointment Request Form</h2>
                         <form id="bookingForm" action="/book-test-submit" method="POST">
                             <div class="row g-3">
                                 <div class="col-md-6">
-                                    <label for="name" class="form-label">Full Name</label>
+                                    <label for="name" class="form-label">Full Name <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" id="name" name="name" required
-                                        placeholder="Enter your full name">
+                                        placeholder="Enter your full name" aria-required="true">
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <label for="phone" class="form-label">Phone Number <span class="text-danger">*</span></label>
                                     <input type="tel" class="form-control" id="phone" name="phone" required
-                                        placeholder="Enter your mobile number">
+                                        placeholder="Enter your mobile number" aria-required="true">
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="test" class="form-label">Preferred Test</label>
-                                    <select class="form-select" id="test" name="test" required>
+                                    <label for="test" class="form-label">Preferred Test <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="test" name="test" required aria-required="true">
                                         <option value="" selected disabled>Select a test...</option>
                                         <option value="MRI">MRI Scan</option>
                                         <option value="CT">CT Scan</option>
@@ -41,8 +55,8 @@
                                     </select>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="date" class="form-label">Preferred Date</label>
-                                    <input type="date" class="form-control" id="date" name="date" required>
+                                    <label for="date" class="form-label">Preferred Date <span class="text-danger">*</span></label>
+                                    <input type="date" class="form-control" id="date" name="date" required aria-required="true">
                                 </div>
                                 <div class="col-12">
                                     <label for="message" class="form-label">Message / Additional Details
@@ -55,7 +69,7 @@
                                 <div class="col-12">
                                     <div class="card bg-light border-primary">
                                         <div class="card-body">
-                                            <h5 class="card-title text-primary">Payment Summary</h5>
+                                            <h3 class="card-title text-primary h5">Payment Summary</h3>
                                             <div class="row">
                                                 <div class="col-6">
                                                     <p class="mb-1">Advance Payment:</p>
@@ -76,6 +90,7 @@
                                 </div>
                             </div>
                         </form>
+                        <p class="text-muted small mt-3">By submitting this form, you agree to be contacted by our team regarding your appointment.</p>
                     </div>
                 </div>
             </div>
